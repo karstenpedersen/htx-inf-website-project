@@ -1,0 +1,38 @@
+.slideshow {
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+    .image {
+        width: 100%;
+        display: none;
+        border-radius: 5px;
+    }
+
+    .navigation {
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+
+        span {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: $color-surface-variant;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+
+            &.selected {
+                background-color: rgb(172, 172, 172);
+            }
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    // TODO - Add dots
+}

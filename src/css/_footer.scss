@@ -1,0 +1,44 @@
+
+
+footer {
+    background-color: $color-footer;
+
+    h3, h4 {
+        color: white;
+    }
+
+    .lists {
+        display: flex;
+        justify-content: space-between;
+    
+        .list-container {
+            padding: 16px;
+            flex: 1;
+
+            a {
+                margin-left: 8px;
+                color: $color-primary;
+                text-decoration: underline;
+            }
+
+            .socials {
+                color: $color-on-footer;
+                padding: 16px 0;
+
+                i {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+
+    p.copyright {
+        font-size: 12px;
+        align-items: center;
+        text-align: center;
+        color: $color-on-footer;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+

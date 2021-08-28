@@ -1,0 +1,254 @@
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: $color-on-background;
+    background-color: $color-background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-on-surface;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+p {
+    color: $color-on-surface;
+    font-family: 'Roboto', sans-serif; 
+
+    &.under-title {
+        color: $color-surface-variant;
+        font-style: italic;
+        font-size: 12px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: $color-on-surface;
+    text-decoration: none;
+
+    &.link {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+}
+
+img {
+    display: block;
+}
+
+button {
+    border: none;
+    font-weight: 700;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+section {
+    margin: 16px;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: auto;
+}
+
+.button-primary {
+    color: $color-surface;
+    background-color: $color-on-surface;
+    border-radius: 30px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+}
+
+.button-card {
+    color: $color-on-primary;
+    background-color: $color-primary;
+    border: 2px solid rgba($color: #000000, $alpha: 0);
+    border-radius: 30px;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        color: $color-primary;
+        background-color: rgba($color: #000000, $alpha: 0);
+        border-color: $color-primary;
+    }
+}
+
+.button-more {
+    color: $color-on-surface;
+    background-color: $color-surface-variant;
+    border: 2px solid rgba($color: #000000, $alpha: 0);
+    border-radius: 30px;
+    padding: 8px 16px;
+
+    &:hover {
+        color: $color-primary;
+        background-color: rgba($color: #000000, $alpha: 0);
+        border-color: $color-primary;
+    }
+}
+
+.section-icons {
+    width: 100%;
+    padding: 16px 0;
+    background-color: $color-surface;
+
+    .content {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            i {
+                margin-right: 16px;
+                font-size: 32px;
+                background-color: $color-surface-variant;
+                border-radius: 50%;
+                padding: 8px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.section-background {
+    width: 100%;
+    background-color: $color-surface;
+
+    .wrapper {
+        padding: 16px 16px;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    &.logo-normal {
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+    
+            h4 {
+                font-size: 18px;
+            }
+    
+            p {
+                color: $color-surface-variant;
+                font-style: italic;
+                font-size: 12px;
+            }
+        }
+    
+        img {
+            margin-right: 16px;
+            width: 48px;
+            background-color: $color-primary;
+            border-radius: 25%;
+        }
+    }
+
+    &.logo-small {
+        img {
+            margin-right: 16px;
+            width: 32px;
+            background-color: $color-primary;
+            border-radius: 20%;
+        }
+    }
+}
+
+// Grid and cards
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.guide-card {
+    height: 350px;
+    background-color: $color-surface;
+    border-radius: 5%;
+    box-shadow: 0px 1px 10px $color-shadow;
+    flex: 0 1 30%;
+    
+    img {
+        width: 100%;
+        height: 45%;
+        display: inline-block;
+        object-fit: cover;
+    }
+
+    .card-info {
+        padding: 0 16px 16px 16px;
+
+        h4 {
+            font-size: 18px;
+            line-height: 24px;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        button {
+            border-radius: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-icons {
+        .content {
+            width: 960px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section-icons .content {
+        flex-direction: column;
+        .item {
+            margin: 8px 0;
+        }
+    }
+}
