@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "watch": true,
+        "rootDir": "./src/ts",
+        "outDir": "./src/js",
+        "strictNullChecks": true
+    }
+}
