@@ -1,5 +1,4 @@
 header {
-    width: 100%;
     background-color: $color-background;
     box-shadow: 0px 1px 10px $color-shadow;
 
@@ -10,23 +9,18 @@ header {
         margin: auto;
         display: flex;
         justify-content: space-between;
-
-        .header-left {
-            
-        }
         
-        .header-right {
-            float: right;
+        .header-menu {
             display: flex;
             align-items: center;
-        
+
             nav {
                 .nav-links {
                     display: flex;
                     justify-content: space-around;
                     margin-right: 24px;
-        
-                    .nav-link {
+                    
+                    a {
                         padding: 12px 24px;
                         margin-left: 16px;
                         color: black;
@@ -50,56 +44,106 @@ header {
                 flex: 1;
                 justify-content: flex-end;
             }
-        
-            .burger {
-                align-items: center;
-                cursor: pointer;
-                display: none;
-        
-                i {
-                    color: $color-on-surface;
-                    font-size: 48px;
-                }
+        }
+
+        .burger {
+            cursor: pointer;
+            display: none;
+
+            div {
+                background-color: $color-on-background;
+                width: 35px;
+                height: 3px;
+                margin: 5px 0;
+                transition: all 0.3s ease;
             }
         }
-        
-        @media screen and (max-width: 768px) {
-            body {
-                overflow-x: hidden;
-            }    
-        
-            .header-right {
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }    
+
+    header {
+        #header-container {
+            .logo-container {
+                width: 100%;
+            }
+
+            .header-menu {
+                width: 100%;
+                z-index: 1;
+                padding: 64px;
+                position: absolute;
+                top: 8vh;
+                right: 0;
+                height: 92vh;
+                background-color: $color-surface;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                opacity: 1;
+    
                 .nav-links {
-                    position: absolute;
-                    right: 0;
-                    height: 92vh;
                     width: 100%;
-                    top: 8vh;
-                    background-color: rgb(221, 221, 221);
-                    display: flex;
-                    justify-content: space-around;
-                    font-size: larger;
+                    height: 100%;
                     flex-direction: column;
+                    opacity: 1;
                     align-items: center;
-                    transform: translateX(100%);
-                    transition: transform 0.5s ease-in;
             
                     li {
+                        width: 100%;
+                        text-align: right;
+                        border-bottom: 4px solid $color-on-surface;
                         opacity: 0;
-                    }
-            
-                    a {
-                        padding: 16px 100px;
+                        padding-bottom: 4px;
+                        margin-bottom: 32px;
+    
+                        &:hover {
+                            border-color: $color-primary;
+                        }
                     }
                 }
             
                 .profile-container {
+                    position: absolute;
+                    bottom: 96px;
                     opacity: 0;
+                    float: right;
+    
+                    button {
+                        padding: 24px 64px;
+                        border-radius: 50px;
+                    }
                 }
-            
-                .burger {
-                    display: block;
+
+                &.active {
+                    transform: translateX(0);
                 }
+            }
+
+            .burger {
+                display: block;
+
+                &.active {
+                    .line1 {
+                        transform: rotate(-45deg) translate(-5px, 6px);
+                    }
+    
+                    .line2 {
+                        opacity: 0;
+                    }
+    
+                    .line3 {
+                        transform: rotate(45deg) translate(-5px, -6px);
+                    }
+                }
+
+                
             }
         }
     }

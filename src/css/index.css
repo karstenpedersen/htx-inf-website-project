@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 24px;
-  margin-bottom: 16px;
 }
 
 p {
@@ -43,7 +42,7 @@ a {
 }
 
 a.link {
-  color: #BA0BFA;
+  color: #00ac72;
   text-decoration: underline;
 }
 
@@ -62,6 +61,20 @@ section {
   margin: 16px;
 }
 
+section .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
 .wrapper {
   max-width: 960px;
   margin: auto;
@@ -76,12 +89,12 @@ section {
 }
 
 .button-primary:hover {
-  background-color: #BA0BFA;
+  background-color: #00ac72;
 }
 
 .button-card {
   color: #FFFFFF;
-  background-color: #BA0BFA;
+  background-color: #00ac72;
   border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 30px;
   padding: 8px 16px;
@@ -90,9 +103,9 @@ section {
 }
 
 .button-card:hover {
-  color: #BA0BFA;
+  color: #00ac72;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #BA0BFA;
+  border-color: #00ac72;
 }
 
 .button-more {
@@ -104,9 +117,9 @@ section {
 }
 
 .button-more:hover {
-  color: #BA0BFA;
+  color: #00ac72;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #BA0BFA;
+  border-color: #00ac72;
 }
 
 .section-icons {
@@ -195,14 +208,14 @@ section {
 .logo-container.logo-normal img {
   margin-right: 16px;
   width: 48px;
-  background-color: #BA0BFA;
+  background-color: #00ac72;
   border-radius: 25%;
 }
 
 .logo-container.logo-small img {
   margin-right: 16px;
   width: 32px;
-  background-color: #BA0BFA;
+  background-color: #00ac72;
   border-radius: 20%;
 }
 
@@ -217,14 +230,25 @@ section {
 .card {
   margin-bottom: 10px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 1px 10px gray;
+          box-shadow: 0px 1px 10px gray;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+  -webkit-box-shadow: 0px 2px 30px gray;
+          box-shadow: 0px 2px 30px gray;
 }
 
 .guide-card {
   height: 350px;
   background-color: #f1f1f1;
   border-radius: 5%;
-  -webkit-box-shadow: 0px 1px 10px gray;
-          box-shadow: 0px 1px 10px gray;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
@@ -278,7 +302,6 @@ section {
 }
 
 header {
-  width: 100%;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 10px gray;
           box-shadow: 0px 1px 10px gray;
@@ -299,8 +322,7 @@ header #header-container {
           justify-content: space-between;
 }
 
-header #header-container .header-right {
-  float: right;
+header #header-container .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +331,7 @@ header #header-container .header-right {
           align-items: center;
 }
 
-header #header-container .header-right nav .nav-links {
+header #header-container .header-menu nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +340,7 @@ header #header-container .header-right nav .nav-links {
   margin-right: 24px;
 }
 
-header #header-container .header-right nav .nav-links .nav-link {
+header #header-container .header-menu nav .nav-links a {
   padding: 12px 24px;
   margin-left: 16px;
   color: black;
@@ -326,16 +348,16 @@ header #header-container .header-right nav .nav-links .nav-link {
   font-weight: 700;
 }
 
-header #header-container .header-right nav .nav-links .nav-link .selected {
+header #header-container .header-menu nav .nav-links a .selected {
   color: #FFFFFF;
   background-color: #950740;
 }
 
-header #header-container .header-right nav .nav-links .nav-link:hover {
-  color: #BA0BFA;
+header #header-container .header-menu nav .nav-links a:hover {
+  color: #00ac72;
 }
 
-header #header-container .header-right .profile-container {
+header #header-container .header-menu .profile-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,36 +369,39 @@ header #header-container .header-right .profile-container {
           justify-content: flex-end;
 }
 
-header #header-container .header-right .burger {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header #header-container .burger {
   cursor: pointer;
   display: none;
 }
 
-header #header-container .header-right .burger i {
-  color: #000000;
-  font-size: 48px;
+header #header-container .burger div {
+  background-color: #000000;
+  width: 35px;
+  height: 3px;
+  margin: 5px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
-  header #header-container body {
+  body {
     overflow-x: hidden;
   }
-  header #header-container .header-right .nav-links {
+  header #header-container .logo-container {
+    width: 100%;
+  }
+  header #header-container .header-menu {
+    width: 100%;
+    z-index: 1;
+    padding: 64px;
     position: absolute;
+    top: 8vh;
     right: 0;
     height: 92vh;
-    width: 100%;
-    top: 8vh;
-    background-color: #dddddd;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: larger;
+    background-color: #f1f1f1;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -390,18 +415,58 @@ header #header-container .header-right .burger i {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    opacity: 1;
   }
-  header #header-container .header-right .nav-links li {
+  header #header-container .header-menu .nav-links {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #header-container .header-menu .nav-links li {
+    width: 100%;
+    text-align: right;
+    border-bottom: 4px solid #000000;
     opacity: 0;
+    padding-bottom: 4px;
+    margin-bottom: 32px;
   }
-  header #header-container .header-right .nav-links a {
-    padding: 16px 100px;
+  header #header-container .header-menu .nav-links li:hover {
+    border-color: #00ac72;
   }
-  header #header-container .header-right .profile-container {
+  header #header-container .header-menu .profile-container {
+    position: absolute;
+    bottom: 96px;
     opacity: 0;
+    float: right;
   }
-  header #header-container .header-right .burger {
+  header #header-container .header-menu .profile-container button {
+    padding: 24px 64px;
+    border-radius: 50px;
+  }
+  header #header-container .header-menu.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  header #header-container .burger {
     display: block;
+  }
+  header #header-container .burger.active .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  header #header-container .burger.active .line2 {
+    opacity: 0;
+  }
+  header #header-container .burger.active .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 
@@ -457,7 +522,7 @@ footer .lists .list-container {
 
 footer .lists .list-container a {
   margin-left: 8px;
-  color: #BA0BFA;
+  color: #00ac72;
   text-decoration: underline;
 }
 
@@ -516,7 +581,7 @@ footer p.copyright {
 }
 
 .slideshow .navigation span:hover {
-  background-color: #BA0BFA;
+  background-color: #00ac72;
 }
 
 #section-popular-categories .lists {
@@ -528,7 +593,7 @@ footer p.copyright {
 }
 
 #section-popular-categories .lists .list-container a {
-  color: #BA0BFA;
+  color: #00ac72;
   text-decoration: underline;
 }
 

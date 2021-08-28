@@ -12,31 +12,30 @@
     <!-- Header -->
     <header>
         <div id="header-container">
-            <div class="header-left">
-                <a class="logo-container logo-normal" href="#">
-                    <img src="./assets/img/logo.svg" alt="logo">
-                    <div class="text">
-                        <h4 class="company-name">SÅ SPIS DEM DA</h4>
-                        <p>Når livet giver rundstykker.</p>
-                    </div>
-                </a>
-            </div>
+            <a class="logo-container logo-normal" href="#">
+                <img src="./assets/img/logo.svg" alt="logo">
+                <div class="text">
+                    <h4 class="company-name">WEB LEARN</h4>
+                </div>
+            </a>
 
-            <div class="header-right">
+            <div class="header-menu">
                 <nav>
                     <ul class="nav-links">
-                        <li><a class="nav-link selected" href="#">Tutorials</a></li>
-                        <li><a class="nav-link" href="#">About</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">More</a></li>
                     </ul>
                 </nav>
     
                 <div class="profile-container">
                     <button class="button-primary">Sign In</button>
                 </div>
-                
-                <div class="burger">
-                    <a href="#"><i class="material-icons">menu</i></a>
-                </div>
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </div>
     </header>
@@ -63,7 +62,11 @@
 
         <!-- Selected guides -->
         <section>
-            <h1>Featured Guides</h1>
+            <div class="header">
+                <h1>Featured Guides</h1>
+                <a class="link" href="#">See More</a>
+            </div>
+            
             <div class="card-grid">
                 <div class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
@@ -92,8 +95,6 @@
                     </div>
                 </div>
             </div>
-
-            <a class="link" href="#">See More</a>
         </section>
     </div>
 
@@ -119,7 +120,10 @@
 
         <!-- ? More guides -->
         <section class="more-guides">
-            <h1>More Guides</h1>
+            <div class="header">
+                <h1>More Guides</h1>
+                <a class="link" href="#">See More</a>
+            </div>
             <div class="card-grid">
                 <div class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
@@ -148,8 +152,6 @@
                     </div>
                 </div>
             </div>
-
-            <a class="link" href="#">See More</a>
         </section>
     </div>
 
@@ -281,6 +283,7 @@
     </footer>
 
     <script src="./src/js/slideshow.js"></script>
+    <script src="./src/js/header.js"></script>
     <script src="./src/js/index.js"></script>
 </body>
 </html>
