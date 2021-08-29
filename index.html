@@ -28,7 +28,7 @@
                 </nav>
     
                 <div class="profile-container">
-                    <button class="button-primary">Sign In</button>
+                    <button class="button-sign-in">Sign In</button>
                 </div>
             </div>
 
@@ -39,11 +39,11 @@
             </div>
         </div>
     </header>
-
+    
     <!-- Section 1 -->
     <div class="wrapper">
         <!-- Slideshow -->
-        <section>
+        <section class="section-slideshow">
             <div class="slideshow">
                 <div class="slide-content">
                     <img class="image" src="./assets/img/slideshow/image1.png" alt="img1">
@@ -60,132 +60,112 @@
             </div>
         </section>
 
-        <!-- Selected guides -->
-        <section>
+        <!-- Featured guides -->
+        <section class="section-header">
             <div class="header">
                 <h1>Featured Guides</h1>
                 <a class="link" href="#">See More</a>
             </div>
             
             <div class="card-grid">
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner HTML</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner CSS</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Advanced HTML</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">Read More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </div>
-
-    <div class="section-icons">
-        <div class="content">
-            <div class="item">
-                <i class="material-icons">public</i>
-                <p>Deploy websites with ease.</p>
-            </div>
-            <div class="item">
-                <i class="material-icons">code</i>
-                <p>Become a CSS master.</p>
-            </div>
-            <div class="item">
-                <i class="material-icons">source</i>
-                <p>Go from beginner to advanced.</p>
+    
+    <!--  -->
+    <section class="section-background section-icons">
+        <div class="wrapper">
+            <div class="icons">
+                <div class="icon">
+                    <i class="material-icons">public</i>
+                    <p>Deploy websites with ease.</p>
+                </div>
+                <div class="icon">
+                    <i class="material-icons">code</i>
+                    <p>Become a CSS master.</p>
+                </div>
+                <div class="icon">
+                    <i class="material-icons">source</i>
+                    <p>Go from beginner to advanced.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
    
     <!-- Section 2 -->
     <div class="wrapper">
-
-        <!-- ? More guides -->
-        <section class="more-guides">
+        <!-- More guides -->
+        <section class="section-header">
             <div class="header">
                 <h1>More Guides</h1>
                 <a class="link" href="#">See More</a>
             </div>
             <div class="card-grid">
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner HTML</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner CSS</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card guide-card">
+                <article class="card guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Advanced HTML</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <button class="button-card">Read More</button>
+                        <button class="button-primary-hollow">Start guide</button>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </div>
 
-    <!-- Popular caregories -->
-    <div id="section-popular-categories" class="section-background">
+    <!-- Popular categories -->
+    <section class="section-background section-header section-lists">
         <div class="wrapper">
-            <h1>Popular Categories</h1>
+            <div class="header">
+                <h1>Popular Categories</h1>
+            </div>
 
             <div class="lists">
-                <div class="list-container">
-                    <h3>Web development</h3>
-                    <ul>
-                        <li>
-                            <div class="item">
-                                <a href="#">HTML</a>
-                                <p>Learn HTML here</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">
-                                <a href="#">CSS</a>
-                                <p>Learn CSS here</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">
-                                <a href="#">HTML</a>
-                                <p>Learn HTML here</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="list-container">
+                <div class="list">
                     <h3>Frontend</h3>
                     <ul>
                         <li>
@@ -202,6 +182,30 @@
                         </li>
                         <li>
                             <div class="item">
+                                <a href="#">Structure</a>
+                                <p>Learn how to structure projects</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="list">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <a href="#">JavaScript</a>
+                                <p>Learn JavaScript here</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <a href="#">Typescript</a>
+                                <p>Learn Typescript here</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
                                 <a href="#">HTML</a>
                                 <p>Learn HTML here</p>
                             </div>
@@ -209,33 +213,51 @@
                     </ul>
                 </div>
 
-                <div class="list-container">
-                    <h3>Backend</h3>
+                <div class="list">
+                    <h3>Data storage</h3>
                     <ul>
                         <li>
                             <div class="item">
-                                <a href="#">HTML</a>
-                                <p>Learn HTML here</p>
+                                <a href="#">Database</a>
+                                <p>Learn about databases</p>
                             </div>
                         </li>
                         <li>
                             <div class="item">
-                                <a href="#">HTML</a>
-                                <p>Learn HTML here</p>
+                                <a href="#">Server</a>
+                                <p>Learn how to host a server</p>
                             </div>
                         </li>
                         <li>
                             <div class="item">
-                                <a href="#">CSS</a>
-                                <p>Learn CSS here</p>
+                                <a href="#">SQL</a>
+                                <p>Learn SQL here</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <button class="button-more">Explore categories</button>
+            <button class="button-surface-hollow">Explore categories</button>
         </div>
+    </section>
+
+    <!-- Section 3 -->
+    <div class="wrapper">
+        <!-- Goals -->
+        <section class="section-split">
+            <article class="content">
+                <div class="image">
+                    <img src="./assets/img/guide.png" alt="image">
+                </div>
+                
+                <div class="text">
+                    <h1>Why should I learn HTML?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sequi enim ratione nam voluptatum, velit officiis asperiores veniam nesciunt corrupti et voluptates cupiditate quo tempora placeat atque molestiae quasi corporis, totam, rerum blanditiis. Perferendis, repudiandae debitis error, quidem quam aliquam id at laudantium, doloribus ducimus veritatis molestias dolores soluta dolore.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, architecto enim. Eveniet in quisquam dolore provident vitae asperiores doloremque? Sed.</p>
+                    <button class="button-primary-hollow">Read more</button>
+                </div>
+            </article>
+        </section>
     </div>
 
     <!-- Footer -->

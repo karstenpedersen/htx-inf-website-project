@@ -2,31 +2,3 @@
 @import "header";
 @import "footer";
 @import "slideshow";
-
-// Section - Popular Categories
-#section-popular-categories {
-    .lists {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-        gap: 20px;
-
-        .list-container {
-
-            a {
-                color: $color-primary;
-                text-decoration: underline;
-            }
-
-            p {
-                color: gray;
-                font-size: 14px;
-                margin-top: 4px;
-                margin-bottom: 8px;
-            }
-        }
-    }
-
-    button.button-more {
-        margin-top: 16px;
-    }
-}

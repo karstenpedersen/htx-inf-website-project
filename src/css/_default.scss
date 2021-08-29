@@ -1,5 +1,11 @@
+/*
+This file should be imported first in all SCSS/SASS files.
+*/
+
 @import "variables";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "mixins";
+
+// Maybe import fonts
 
 * {
     margin: 0;
@@ -56,106 +62,182 @@ button {
     font-weight: 700;
     padding: 12px 28px;
     cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.2s ease;
+
+    // Default button styles
+    // Uses primary colors
+    &.button-primary {
+        color: $color-surface;
+        background-color: $color-on-surface;
+    
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+    
+    // Uses primary color and turns hollow
+    &.button-primary-hollow {
+        color: $color-on-primary;
+        background-color: $color-primary;
+        border: 2px solid rgba($color: #000000, $alpha: 0);
+        padding: 8px 16px;
+    
+        &:hover {
+            color: $color-primary;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border-color: $color-primary;
+        }
+    }
+    
+    // Uses surface-variant color
+    &.button-surface-hollow {
+        color: $color-on-surface;
+        background-color: $color-surface-variant;
+        border: 2px solid rgba($color: #000000, $alpha: 0);
+        padding: 8px 16px;
+    
+        &:hover {
+            color: $color-primary;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border-color: $color-primary;
+        }
+    }
+
+    // Special buttons
+    // Login / sign in button
+    &.button-sign-in {
+        @extend .button-primary;
+        border-radius: 5px;
+    }
 }
 
 section {
     margin: 16px;
 
-    .header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-    }
-}
-
-.wrapper {
-    max-width: 960px;
-    margin: auto;
-}
-
-.button-primary {
-    color: $color-surface;
-    background-color: $color-on-surface;
-    border-radius: 30px;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-        background-color: $color-primary;
-    }
-}
-
-.button-card {
-    color: $color-on-primary;
-    background-color: $color-primary;
-    border: 2px solid rgba($color: #000000, $alpha: 0);
-    border-radius: 30px;
-    padding: 8px 16px;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-        color: $color-primary;
-        background-color: rgba($color: #000000, $alpha: 0);
-        border-color: $color-primary;
-    }
-}
-
-.button-more {
-    color: $color-on-surface;
-    background-color: $color-surface-variant;
-    border: 2px solid rgba($color: #000000, $alpha: 0);
-    border-radius: 30px;
-    padding: 8px 16px;
-
-    &:hover {
-        color: $color-primary;
-        background-color: rgba($color: #000000, $alpha: 0);
-        border-color: $color-primary;
-    }
-}
-
-.section-icons {
-    width: 100%;
-    padding: 16px 0;
-    background-color: $color-surface;
-
-    .content {
-        width: 90%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: auto;
-
-        .item {
+    // Has a header
+    &.section-header {
+        .header {
+            width: 100%;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            
-            i {
-                margin-right: 16px;
-                font-size: 32px;
-                background-color: $color-surface-variant;
-                border-radius: 50%;
-                padding: 8px;
-            }
+            align-items: center;
+            margin-bottom: 16px;
+        }
+    }
 
+    // Has another background color (is full width of window)
+    &.section-background {
+        background-color: $color-surface;
+        margin: 0;
+    
+        .wrapper {
+            padding: 16px 16px;
+        }
+    }
+
+    // Contains lists of items (used in popular categories section)
+    &.section-lists {
+        .lists {
+            @include displayGrid(225px, 20px);
+    
+            .list {
+                a {
+                    color: $color-primary;
+                    text-decoration: underline;
+                }
+    
+                p {
+                    color: $color-on-surface-variant;
+                    font-size: 14px;
+                    margin-top: 4px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    
+        button:last-child {
+            margin-top: 16px;
+        }
+    }
+
+    // Two panels next to eachother
+    &.section-split .content {
+        @include displayGrid(300px, 24px);
+    
+        .text {
+            h1 {
+                margin-bottom: 8px;
+            }
+    
             p {
-                font-size: 16px;
+    
+                &:last-child {
+                    margin-bottom: 16px;
+                }
+            }
+    
+            button {
+                margin-top: 24px;
+            }
+        }
+    
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+    
+            img {
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // Has icons with text
+    &.section-icons {
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+    
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                i {
+                    margin-right: 16px;
+                    font-size: 32px;
+                    background-color: $color-surface-variant;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
+    
+                p {
+                    font-size: 16px;
+
+                    @media screen and (max-width: 960px) {
+                        display: none;
+                    }
+                }
             }
         }
     }
 }
 
-.section-background {
-    width: 100%;
-    background-color: $color-surface;
+// Custom classes
 
-    .wrapper {
-        padding: 16px 16px;
-    }
+// Wrappers
+.wrapper {
+    max-width: 960px;
+    margin: auto;
 }
 
+// Logo / company container
 .logo-container {
     display: flex;
     align-items: center;
@@ -197,9 +279,7 @@ section {
 
 // Grid and cards
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    gap: 20px;
+    @include displayGrid(225px, 20px);
 }
 
 .card {
@@ -241,27 +321,6 @@ section {
             font-size: 16px;
             color: black;
             margin-bottom: 8px;
-        }
-
-        button {
-            border-radius: 30px;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .section-icons {
-        .content {
-            width: 960px;
-        }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .section-icons .content {
-        flex-direction: column;
-        .item {
-            margin: 8px 0;
         }
     }
 }
