@@ -1,5 +1,7 @@
+
 const navigation: HTMLElement = document.getElementsByClassName('slideshow')[0].getElementsByClassName('navigation')[0] as HTMLElement;
 const images: HTMLElement[] = Array.from(document.getElementsByClassName('slideshow')[0].getElementsByClassName('image') as HTMLCollectionOf<HTMLElement>);
+const imageContainer: HTMLElement = document.getElementsByClassName('slideshow')[0].querySelector('.slide-content') as HTMLElement;
 var dots: HTMLElement[] = [];
 var imageIndex = 0;
 
@@ -9,7 +11,21 @@ function setupSlideshow() {
     }
     
     for (let i = 0; i < images.length; i++) {
-        dots.push(document.createElement("span"));
+        imageContainer.addEventListener('dragover', (e) => {
+            e = e || window.event;
+            
+            if (e.pageX < 0) {
+                prevSlide();
+            } else if (e.pageX > 0) {
+                nextSlide();
+            }
+        });
+
+        let dot = document.createElement("span");
+        dot.addEventListener('click', () => {
+            setSlide(i);
+        });
+        dots.push(dot);
         navigation.appendChild(dots[i]);
     }
 
@@ -17,6 +33,30 @@ function setupSlideshow() {
 }
 
 function updateSlideshow() {
+    // Set current slideshow
+    setSlide(imageIndex);
+
+    // Cycle images
+    nextSlide();
+
+    // Loop
+    setTimeout(updateSlideshow, 2500);
+}
+
+function prevSlide() {
+    imageIndex--;
+    if (imageIndex < 0)
+        imageIndex = images.length - 1;
+}
+
+function nextSlide() {
+    imageIndex++;
+    if (imageIndex > images.length - 1)
+        imageIndex = 0;
+}
+
+function setSlide(imageIndex) {
+    this.imageIndex = imageIndex;
     // Hide images
     for (let i = 0; i < images.length; i++) {
         images[i].style.display = 'none';
@@ -24,17 +64,8 @@ function updateSlideshow() {
     }
 
     // Display selected image
-    images[imageIndex].style.display = 'block';
-    dots[imageIndex].classList.add("selected");
-
-    // Cycle images
-    imageIndex += 1;
-    if (imageIndex > images.length - 1) {
-        imageIndex = 0;
-    } 
-
-    // Loop
-    setTimeout(updateSlideshow, 2500);
+    images[this.imageIndex].style.display = 'block';
+    dots[this.imageIndex].classList.add("selected");
 }
 
 // Setup slideshow
