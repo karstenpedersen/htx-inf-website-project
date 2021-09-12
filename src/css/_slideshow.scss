@@ -1,6 +1,6 @@
 .slideshow {
     width: 100%;
-    margin: auto;
+    margin-inline: auto;
     position: relative;
 
     .image {
@@ -12,14 +12,14 @@
     .navigation {
         width: 100%;
         text-align: center;
-        margin-top: 14px;
+        margin-top: 1rem;
 
         span {
             cursor: pointer;
-            height: 13px;
-            width: 13px;
-            margin: 0 4px;
-            background-color: $color-surface-variant;
+            height: 14px;
+            width: 14px;
+            margin: 0 5px;
+            background-color: var(--clr-surface-variant);
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.3s ease;
@@ -29,10 +29,8 @@
             }
 
             &:hover {
-                background-color: $color-primary;
+                background-color: var(--clr-primary);
             }
         }
     }
-
-    // TODO - Add dots
 }

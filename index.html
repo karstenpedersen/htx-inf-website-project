@@ -21,14 +21,29 @@
 
             <div class="header-menu">
                 <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">More</a></li>
+                    <ul class="nav-menus">
+                        <li class="menu">
+                            <a class="menu-name" href="#">Guides</a>
+                            <ul>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JS</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a class="menu-name" href="#">More</a>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a class="menu-name" href="#">Test</a></li>
                     </ul>
                 </nav>
     
                 <div class="profile-container">
-                    <button class="button-sign-in">Sign In</button>
+                    <button class="button-primary">Sign In</button>
                 </div>
             </div>
 
@@ -68,7 +83,7 @@
             </div>
             
             <div class="card-grid">
-                <article class="card guide-card">
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner HTML</h4>
@@ -77,7 +92,7 @@
                     </div>
                 </article>
 
-                <article class="card guide-card">
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner CSS</h4>
@@ -86,7 +101,7 @@
                     </div>
                 </article>
 
-                <article class="card guide-card">
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Advanced HTML</h4>
@@ -100,7 +115,7 @@
     
     <!--  -->
     <section class="section-background section-icons">
-        <div class="wrapper">
+        <div class="wrapper-margin">
             <div class="icons">
                 <div class="icon">
                     <i class="material-icons">public</i>
@@ -127,7 +142,20 @@
                 <a class="link" href="#">See More</a>
             </div>
             <div class="card-grid">
-                <article class="card guide-card">
+                <article class="guide-card">
+                    <a href="#">
+                        <img src="./assets/img/guide2.png" alt="thumbnail">
+                        <h4 class="title">Beginner HTML ddddd ddd dddd</h4>
+                        <p class="creator">Karsten Pedersen</p>
+                        <div class="tags">
+                            <div class="tag">HTML</div>
+                            <div class="tag">HTML</div>
+                            <div class="tag">HTML</div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner HTML</h4>
@@ -136,7 +164,16 @@
                     </div>
                 </article>
 
-                <article class="card guide-card">
+                <article class="guide-card">
+                    <img src="./assets/img/guide2.png" alt="thumbnail">
+                    <div class="card-info">
+                        <h4>Beginner HTML</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="button-primary-hollow">Start guide</button>
+                    </div>
+                </article>
+
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Beginner CSS</h4>
@@ -145,7 +182,7 @@
                     </div>
                 </article>
 
-                <article class="card guide-card">
+                <article class="guide-card">
                     <img src="./assets/img/guide2.png" alt="thumbnail">
                     <div class="card-info">
                         <h4>Advanced HTML</h4>
@@ -159,7 +196,7 @@
 
     <!-- Popular categories -->
     <section class="section-background section-header section-lists">
-        <div class="wrapper">
+        <div class="wrapper-margin">
             <div class="header">
                 <h1>Popular Categories</h1>
             </div>
@@ -214,6 +251,30 @@
                 </div>
 
                 <div class="list">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <a href="#">HTML</a>
+                                <p>Learn HTML here</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <a href="#">CSS</a>
+                                <p>Learn CSS here</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <a href="#">Structure</a>
+                                <p>Learn how to structure projects</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list">
                     <h3>Data storage</h3>
                     <ul>
                         <li>
@@ -262,7 +323,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="wrapper">
+        <div class="wrapper-margin">
             <div class="content">
                 <div class="company">
                     <div class="logo-container logo-small">
@@ -322,12 +383,13 @@
                     <a class="link" href="#">Terms of Use</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
+    <i id="button-back-to-top" class="material-icons">arrow_upward</i>
+
+    <script src="./src/js/default.js"></script>
     <script src="./src/js/slideshow.js"></script>
-    <script src="./src/js/header.js"></script>
     <script src="./src/js/index.js"></script>
 </body>
 </html>

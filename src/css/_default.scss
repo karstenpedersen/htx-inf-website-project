@@ -11,27 +11,27 @@
 }
 
 body {
-    color: $color-on-background;
-    background-color: $color-background;
+    color: var(--clr-on-background);
+    background-color: var(--clr-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $color-on-surface;
+    color: var(--clr-on-surface);
     font-weight: 700;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: var(--fs-larger);
 }
 
 p {
-    color: $color-on-surface;
+    color: var(--clr-on-surface);
     font-family: 'Roboto', sans-serif; 
 
     &.under-title {
-        color: $color-surface-variant;
+        color: var(--clr-surface-variant);
         font-style: italic;
-        font-size: 12px;
+        font-size: var(--fs-smaller);
     }
 }
 
@@ -40,13 +40,18 @@ li {
 }
 
 a {
-    color: $color-on-surface;
+    color: var(--clr-on-surface);
     text-decoration: none;
 
     &.link {
-        color: $color-primary;
+        color: var(--clr-primary);
         text-decoration: underline;
     }
+}
+
+label {
+    font-size: var(--fs-small);
+    color: var(--clr-on-footer-variant);
 }
 
 img {
@@ -57,18 +62,18 @@ img {
 input {
     width: 100%;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: var(--fs-small);
     border: 2px solid transparent;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     padding: 2px;
     
     &:focus {
         outline: none;
-        border-color: $color-primary;
+        border-color: var(--clr-primary);
     }
 
     &[type="submit"] {
-        margin-top: 8px;
+        margin-top: 0.5rem;
     }
 }
 
@@ -81,7 +86,7 @@ textarea {
 button {
     border: none;
     font-weight: 700;
-    padding: 12px 28px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.2s ease;
@@ -89,52 +94,43 @@ button {
     // Default button styles
     // Uses primary colors
     &.button-primary {
-        color: $color-surface;
-        background-color: $color-on-surface;
+        color: var(--clr-surface);
+        background-color: var(--clr-on-surface);
         
         &:hover {
-            background-color: $color-primary;
+            background-color: var(--clr-primary);
         }
     }
     
     // Uses primary color and turns hollow
     &.button-primary-hollow {
-        color: $color-on-primary;
-        background-color: $color-primary;
+        color: var(--clr-on-primary);
+        background-color: var(--clr-primary);
         border: 2px solid rgba($color: #000000, $alpha: 0);
-        padding: 8px 16px;
         
         &:hover {
-            color: $color-primary;
+            color: var(--clr-primary);
             background-color: rgba($color: #000000, $alpha: 0);
-            border-color: $color-primary;
+            border-color: var(--clr-primary);
         }
     }
     
     // Uses surface-variant color
     &.button-surface-hollow {
-        color: $color-on-surface;
-        background-color: $color-surface-variant;
-        border: 2px solid rgba($color: #000000, $alpha: 0);
-        padding: 8px 16px;
+        color: var(--clr-on-surface);
+        background-color: var(--clr-surface-variant);
+        border: 2px solid var(--clr-transparent);
     
         &:hover {
-            color: $color-primary;
+            color: var(--clr-primary);
             background-color: rgba($color: #000000, $alpha: 0);
-            border-color: $color-primary;
+            border-color: var(--clr-primary);
         }
-    }
-
-    // Special buttons
-    // Login / sign in button
-    &.button-sign-in {
-        @extend .button-primary;
-        border-radius: 5px;
     }
 }
 
 section {
-    margin: 16px;
+    margin: 2rem 1rem;
 
     // Has a header
     &.section-header {
@@ -143,63 +139,60 @@ section {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
     }
 
     // Has another background color (is full width of window)
     &.section-background {
-        background-color: $color-surface;
+        background-color: var(--clr-surface);
         margin: 0;
-    
-        .wrapper {
-            padding: 16px 16px;
-        }
     }
 
     // Contains lists of items (used in popular categories section)
     &.section-lists {
         .lists {
-            @include displayGrid(225px, 20px);
+            @include cardGrid();
+            //@include displayGrid(14rem, 1.25rem);
     
             .list {
                 a {
-                    color: $color-primary;
+                    color: var(--clr-primary);
                     text-decoration: underline;
                 }
     
                 p {
-                    color: $color-on-surface-variant;
-                    font-size: 14px;
-                    margin-top: 4px;
-                    margin-bottom: 8px;
+                    color: var(--clr-on-surface-variant);
+                    font-size: var(--fs-small);
+                    margin-top: 0.25rem;
+                    margin-bottom: 0.5rem;
                 }
             }
         }
     
         button:last-child {
-            margin-top: 16px;
+            margin-top: 1rem;
         }
     }
 
     // Two panels next to eachother
     &.section-split .content {
-        @include displayGrid(300px, 24px);
+        @include displayGrid(18.75rem, 1.5rem);
     
         .text {
             h1 {
-                margin-bottom: 8px;
+                margin-bottom: 0.5rem;
             }
     
             p {
     
                 &:last-child {
-                    margin-bottom: 16px;
+                    margin-bottom: 1rem;
                 }
             }
     
             button {
-                margin-top: 24px;
+                margin-top: 1.5rem;
             }
         }
     
@@ -209,7 +202,7 @@ section {
             object-fit: cover;
     
             img {
-                border-radius: 15px;
+                border-radius: 1rem;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -219,11 +212,13 @@ section {
 
     // Has icons with text
     &.section-icons {
+        .wrapper-margin {
+            padding: 1rem;
+        }
+
         .icons {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            margin: auto;
     
             .icon {
                 display: flex;
@@ -231,17 +226,17 @@ section {
                 justify-content: space-between;
                 
                 i {
-                    margin-right: 16px;
-                    font-size: 32px;
-                    background-color: $color-surface-variant;
+                    margin-right: 1rem;
+                    font-size: 2rem;
+                    background-color: var(--clr-surface-variant);
                     border-radius: 50%;
-                    padding: 8px;
+                    padding: 0.5rem;
                 }
     
                 p {
-                    font-size: 16px;
+                    font-size: var(--fs-medium);
 
-                    @media screen and (max-width: 960px) {
+                    @media screen and (max-width: 60rem) {
                         display: none;
                     }
                 }
@@ -252,8 +247,13 @@ section {
 
 // Wrappers
 .wrapper {
-    max-width: 960px;
-    margin: auto;
+    max-width: var(--ss-wrapper);
+    margin-inline: auto;
+}
+
+.wrapper-margin {
+    @extend .wrapper;
+    padding: 1rem;
 }
 
 // Logo / company container
@@ -268,29 +268,29 @@ section {
             justify-content: space-around;
     
             h4 {
-                font-size: 18px;
+                font-size: var(--fs-large);
             }
     
             p {
-                color: $color-surface-variant;
+                color: var(--clr-surface-variant);
                 font-style: italic;
-                font-size: 12px;
+                font-size: var(--fs-smaller);
             }
         }
     
         img {
-            margin-right: 16px;
-            width: 48px;
-            background-color: $color-primary;
+            margin-right: 1rem;
+            width: 3rem;
+            background-color: var(--clr-primary);
             border-radius: 25%;
         }
     }
 
     &.logo-small {
         img {
-            margin-right: 16px;
-            width: 32px;
-            background-color: $color-primary;
+            margin-right: 1rem;
+            width: 2rem;
+            background-color: var(--clr-primary);
             border-radius: 20%;
         }
     }
@@ -298,48 +298,84 @@ section {
 
 // Grid and cards
 .card-grid {
-    @include displayGrid(225px, 20px);
+    //@include displayGrid(225px, 20px);
+    @include cardGrid();
 }
 
 .card {
-    margin-bottom: 10px;
     overflow: hidden;
-    box-shadow: 0px 1px 10px $color-shadow;
+
+    /*
+    box-shadow: 0px 1px 10px var(--clr-shadow);
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
         transition: transform 0.1s ease-in;
-        box-shadow: 0px 2px 30px $color-shadow;
-    }
+        box-shadow: 0px 2px 30px var(--clr-shadow);
+    }*/
 }
 
 .guide-card {
-    height: 350px;
-    background-color: $color-surface;
-    border-radius: 5%;
-    flex: 0 1 30%;
-    
+    @extend .card;
+
+    //background-color: var(--clr-surface);
+    //border-radius: 5%;
+    border: 1px solid black;
+
+    a {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+    }
+
     img {
         width: 100%;
-        height: 45%;
+        height: 50%;
         display: inline-block;
         object-fit: cover;
     }
 
-    .card-info {
-        padding: 0 16px 16px 16px;
+    .title {
+        font-size: var(--fs-large);
+        color: var(--clr-dark);
+        line-height: 1.5rem;
+    }
 
-        h4 {
-            font-size: 18px;
-            line-height: 24px;
-            color: black;
-            margin-bottom: 8px;
-        }
+    .creator {
+        font-size: var(--fs-small);
+        color: var(--clr-on-surface-variant);
+    }
 
-        p {
-            font-size: 16px;
-            color: black;
-            margin-bottom: 8px;
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+
+        .tag {
+            font-size: var(--fs-smaller);
+            padding: 0 0.5rem;
+            line-height: 1.5em;
+            
+            color: var(--clr-on-primary);
+            background-color: var(--clr-primary);
         }
+    }
+
+}
+
+#button-back-to-top {
+    position: fixed;
+    padding: 0.5rem;
+    border-radius: 50px;
+    background-color: var(--clr-surface-variant);
+    bottom: 4rem;
+    right: 2rem;
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (max-width: 73rem) {
+        display: none;
     }
 }

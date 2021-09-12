@@ -1,17 +1,17 @@
 
 footer {
-    background-color: $color-footer;
-    padding: 8px 0;
+    background-color: var(--clr-footer);
 
     h1, h2, h3, h4, h5, h6 {
-        color: $color-on-footer;
+        color: var(--clr-on-footer);
     }
 
     .wrapper {  
-        padding: 16px;
+        
+
         a {
-            color: $color-on-surface-variant;
-            font-size: 14px;
+            color: var(--clr-on-footer-variant);
+            font-size: var(--fs-small);
         }
 
         .content {
@@ -28,11 +28,11 @@ footer {
 
                 .socials {
                     margin-top: 20px;
-                    color: $color-on-footer;
+                    color: var(--clr-on-footer);
         
                     i {
-                        color: $color-on-footer;
-                        background-color: $color-on-surface-variant;
+                        color: var(--clr-on-footer);
+                        background-color: var(--clr-on-footer-variant);
                         padding: 4px;
                         border-radius: 5px;
                         margin-right: 4px;
@@ -51,22 +51,22 @@ footer {
             .contact {
                 grid-area: contact;
 
-                label {
-                    font-size: 14px;
-                    color: $color-on-surface-variant;
+                input {
+                    color: white;
+                    background-color: var(--clr-on-footer-variant);
                 }
             }
         }
         
         .legal-information {
-            margin-top: 24px;
+            margin-top: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             .copyright {
-                font-size: 12px;
-                color: $color-on-surface-variant;
+                font-size: var(--fs-smaller);
+                color: var(--clr-on-footer-variant);
             }
 
             .links {
@@ -79,7 +79,7 @@ footer {
             }
 
             a {
-                font-size: 12px;
+                font-size: var(--fs-smaller);
             }
         }
     }
@@ -96,6 +96,7 @@ footer {
                     justify-content: space-between;
                     align-items: center;
                     text-align: center;
+                    margin-bottom: 1rem;
                 }
             }
 
