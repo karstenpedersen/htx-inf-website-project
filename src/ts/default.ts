@@ -7,6 +7,7 @@ const headerUser: HTMLElement = document.querySelector('.header-menu .profile-co
 const backToTopBtn: HTMLElement = document.querySelector('#button-back-to-top') as HTMLElement;
 
 var previousScroll = window.scrollY;
+var backToTopButtonThreshold = 200;
 
 // Event Listeners
 backToTopBtn.addEventListener('click', () => {
@@ -45,10 +46,23 @@ window.onresize = () => {
 // Methods
 // Back to top button handler function
 function backToTopButtonHandler() {
-    if (document.documentElement.scrollTop > 50 && window.innerWidth > 1168) {
-        backToTopBtn.style.display = 'block';
+    if (document.documentElement.scrollTop > backToTopButtonThreshold && window.innerWidth > 1168) {
+        toggleBackToTopButton('show');
     } else {
-        backToTopBtn.style.display = 'none';
+        toggleBackToTopButton('hide');
+    }
+}
+
+function toggleBackToTopButton(option = '') {
+    if (option === 'show') {
+        backToTopBtn.classList.remove('hide');
+        console.log('remove');
+    } else if (option === 'hide') {
+        backToTopBtn.classList.add('hide');
+        console.log('add');
+    } else {
+        backToTopBtn.classList.toggle('hide');
+        console.log('toggle');
     }
 }
 

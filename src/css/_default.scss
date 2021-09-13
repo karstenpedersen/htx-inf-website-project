@@ -369,13 +369,13 @@ section {
     background-color: var(--clr-surface-variant);
     bottom: 4rem;
     right: 2rem;
-    display: none;
     cursor: pointer;
     font-size: 2rem;
     align-items: center;
     text-align: center;
+    transition: bottom 0.5s ease;
 
-    @media screen and (max-width: 73rem) {
-        display: none;
+    &.hide {
+        bottom: -10rem;
     }
 }

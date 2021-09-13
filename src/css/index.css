@@ -399,19 +399,18 @@ section.section-icons .icons .icon p {
   background-color: var(--clr-surface-variant);
   bottom: 4rem;
   right: 2rem;
-  display: none;
   cursor: pointer;
   font-size: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease;
 }
 
-@media screen and (max-width: 73rem) {
-  #button-back-to-top {
-    display: none;
-  }
+#button-back-to-top.hide {
+  bottom: -10rem;
 }
 
 header {
