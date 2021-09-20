@@ -1,14 +1,12 @@
 
 footer {
     background-color: var(--clr-footer);
-
+    padding-top: 1rem;
     h1, h2, h3, h4, h5, h6 {
         color: var(--clr-on-footer);
     }
 
     .wrapper {  
-        
-
         a {
             color: var(--clr-on-footer-variant);
             font-size: var(--fs-small);
@@ -27,15 +25,14 @@ footer {
                 grid-area: company;
 
                 .socials {
-                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
                     color: var(--clr-on-footer);
-        
-                    i {
+                    margin-top: 20px;
+                    
+                    img {
                         color: var(--clr-on-footer);
-                        background-color: var(--clr-on-footer-variant);
-                        padding: 4px;
-                        border-radius: 5px;
-                        margin-right: 4px;
+                        width: 4rem;
                     }
                 }
             }
@@ -97,6 +94,10 @@ footer {
                     align-items: center;
                     text-align: center;
                     margin-bottom: 1rem;
+
+                    .socials {
+                        margin-top: 0;
+                    }
                 }
             }
 

@@ -701,6 +701,7 @@ body {
 
 footer {
   background-color: var(--clr-footer);
+  padding-top: 1rem;
 }
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
@@ -731,16 +732,19 @@ footer .wrapper .content .company, footer .wrapper-margin .content .company {
 }
 
 footer .wrapper .content .company .socials, footer .wrapper-margin .content .company .socials {
-  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--clr-on-footer);
+  margin-top: 20px;
 }
 
-footer .wrapper .content .company .socials i, footer .wrapper-margin .content .company .socials i {
+footer .wrapper .content .company .socials img, footer .wrapper-margin .content .company .socials img {
   color: var(--clr-on-footer);
-  background-color: var(--clr-on-footer-variant);
-  padding: 4px;
-  border-radius: 5px;
-  margin-right: 4px;
+  width: 4rem;
 }
 
 footer .wrapper .content .website-links, footer .wrapper-margin .content .website-links {
@@ -820,6 +824,9 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
             align-items: center;
     text-align: center;
     margin-bottom: 1rem;
+  }
+  footer .wrapper .content .company .socials, footer .wrapper-margin .content .company .socials {
+    margin-top: 0;
   }
   footer .wrapper .legal-information, footer .wrapper-margin .legal-information {
     -webkit-box-orient: vertical;
