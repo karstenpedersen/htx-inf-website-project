@@ -3,7 +3,7 @@
   --clr-light: #FFFFFF;
   --clr-dark: #121213;
   --clr-light-variant: #F1F1F1;
-  --clr-text-underline: gray;
+  --clr-text-underline: rgb(126, 126, 126);
   --clr-on-primary: var(--clr-light);
   --clr-background: var(--clr-light);
   --clr-on-background: var(--clr-dark);
@@ -325,15 +325,11 @@ section.section-icons .icons .icon p {
 .logo-container.logo-normal img {
   margin-right: 1rem;
   width: 3rem;
-  background-color: var(--clr-primary);
-  border-radius: 25%;
 }
 
 .logo-container.logo-small img {
-  margin-right: 1rem;
-  width: 2rem;
-  background-color: var(--clr-primary);
-  border-radius: 20%;
+  margin-right: 0.75rem;
+  width: 2.5rem;
 }
 
 .card-grid {
@@ -354,45 +350,52 @@ section.section-icons .icons .icon p {
         transition: transform 0.1s ease-in;
         box-shadow: 0px 2px 30px var(--clr-shadow);
     }*/
+  height: 300px;
 }
 
 .guide-card {
-  border: 1px solid black;
+  background-color: var(--clr-surface);
+  border-radius: 0.5rem;
 }
 
 .guide-card a {
   width: 100%;
   height: 100%;
-  background-color: blue;
 }
 
 .guide-card img {
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: inline-block;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.guide-card .title {
+.guide-card .content {
+  margin-inline: 1rem;
+}
+
+.guide-card .content .title {
   font-size: var(--fs-large);
   color: var(--clr-dark);
   line-height: 1.5rem;
 }
 
-.guide-card .creator {
+.guide-card .content .creator {
+  margin-top: 0.25rem;
   font-size: var(--fs-small);
   color: var(--clr-on-surface-variant);
 }
 
-.guide-card .tags {
+.guide-card .content .tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
-.guide-card .tags .tag {
+.guide-card .content .tags .tag {
   font-size: var(--fs-smaller);
   padding: 0 0.5rem;
   line-height: 1.5em;
