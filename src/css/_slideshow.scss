@@ -1,12 +1,56 @@
 .slideshow {
     width: 100%;
+    height: 540px;
+    margin-bottom: 4rem;
+    
     margin-inline: auto;
     position: relative;
 
-    .image {
-        width: 100%;
-        display: none;
-        border-radius: 5px;
+    .slide-content {
+        height: inherit;
+
+        .image {
+            width: inherit;
+            height: inherit;
+            display: none;
+            position: absolute;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+    
+            .text {
+                position: absolute;
+                top: 100%;
+                transform: translateY(-100%);
+                background-color: rgba($color: #000000, $alpha: .65);
+                color: white;
+                padding: 1rem 5rem;
+                
+                h5 {
+                    color: white;
+                    font-size: 1.75rem;
+                }
+
+                p {
+                    color: white;
+                }
+
+                &.left {
+                    left: 0;
+                    border-bottom-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                &.right {
+                    right: 0;
+                    border-top-left-radius: 10px;
+                }
+            }
+        }
     }
 
     .navigation {

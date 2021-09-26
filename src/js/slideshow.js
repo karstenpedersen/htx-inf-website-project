@@ -32,7 +32,7 @@ function updateSlideshow() {
     // Cycle images
     nextSlide();
     // Loop
-    setTimeout(updateSlideshow, 2500);
+    setTimeout(updateSlideshow, 4500);
 }
 function prevSlide() {
     imageIndex--;

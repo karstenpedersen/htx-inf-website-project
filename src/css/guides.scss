@@ -1,0 +1,12 @@
+@import "default";
+@import "header";
+@import "footer";
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    input {
+        background-color: var(--clr-background);
+    }
+}

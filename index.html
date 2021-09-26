@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="./src/css/index.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>WEB BRAIN</title>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div id="header-container">
-            <a class="logo-container logo-normal" href="#">
+            <a class="logo-container logo-normal" href="index.html">
                 <img src="./assets/img/web-learn-logo.svg" alt="logo">
                 <div class="text">
                     <h4 class="company-name">WEB BRAIN</h4>
@@ -23,22 +25,21 @@
                 <nav>
                     <ul class="nav-menus">
                         <li class="menu">
-                            <a class="menu-name" href="#">Guides</a>
-                            <ul>
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                                <li><a href="#">JS</a></li>
-                            </ul>
+                            <a class="title" href="/src/html/guides.html">
+                                <p class="menu-name">Guides</p>
+                            </a>
                         </li>
                         <li class="menu">
-                            <a class="menu-name" href="#">More</a>
+                            <div class="title">
+                                <p class="menu-name" href="#">More</p>
+                                <i class="material-icons">arrow_drop_down</i>
+                            </div>
                             <ul>
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </li>
-                        <li class="menu"><a class="menu-name" href="#">Test</a></li>
                     </ul>
                 </nav>
     
@@ -61,11 +62,45 @@
         <section class="section-slideshow">
             <div class="slideshow">
                 <div class="slide-content">
-                    <img class="image" src="./assets/img/slideshow/image1.png" alt="img1">
-                    <img class="image" src="./assets/img/slideshow/image2.png" alt="img2">
-                    <img class="image" src="./assets/img/slideshow/image3.png" alt="img3">
-                    <img class="image" src="./assets/img/slideshow/image4.png" alt="img4">
-                    <img class="image" src="./assets/img/slideshow/image5.png" alt="img5">
+                    <div class="image">
+                        <img src="./assets/img/slideshow/image1.png" alt="img1">
+                        <div class="text right">
+                            <h5>Teamwork</h5>
+                            <p>Learn to work in teams and finish projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="image">
+                        <img src="./assets/img/slideshow/image2.png" alt="img2">
+                        <div class="text left">
+                            <h5>Learn to code</h5>
+                            <p>Coding is a great tool and will get you far.</p>
+                        </div>
+                    </div>
+
+                    <div class="image ">
+                        <img src="./assets/img/slideshow/image3.png" alt="img3">
+                        <div class="text left">
+                            <h5>Control data</h5>
+                            <p>Learn backend development.</p>
+                        </div>
+                    </div>
+
+                    <div class="image">
+                        <img src="./assets/img/slideshow/image4.png" alt="img4">
+                        <div class="text left">
+                            <h5>Get a job</h5>
+                            <p>Learn what skills companies are looking for.</p>
+                        </div>
+                    </div>
+
+                    <div class="image">
+                        <img src="./assets/img/slideshow/image5.png" alt="img5">
+                        <div class="text right">
+                            <h5>Learn to program</h5>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="navigation">
                     <span class="dot"></span>
@@ -85,7 +120,7 @@
             <div class="card-grid">
                 <article class="guide-card">
                     <a href="#">
-                        <img src="./assets/img/guide2.png" alt="thumbnail">
+                        <img src="./assets/img/guides/stock-html.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner HTML</h4>
                             <p class="creator">Karsten Pedersen</p>
@@ -113,13 +148,28 @@
 
                 <article class="guide-card">
                     <a href="#">
-                        <img src="./assets/img/guide2.png" alt="thumbnail">
+                        <img src="./assets/img/guides/stock-teamwork.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
+                            <p class="creator">Rasmus Sejer</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                                 <div class="tag">CSS</div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="guide-card">
+                    <a href="#">
+                        <img src="./assets/img/guides/stock-coding.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Modern HTML Frontpage</h4>
+                            <p class="creator">Magnus</p>
+                            <div class="tags">
+                                <div class="tag">HTML</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JS</div>
                             </div>
                         </div>
                     </a>
@@ -157,45 +207,51 @@
                 <a class="link" href="#">See More</a>
             </div>
             <div class="card-grid">
-                <article class="guide-card">
+                <article class="guide-card placeholder-guide">
                     <a href="#">
-                        <img src="./assets/img/guide2.png" alt="thumbnail">
-                        <div class="content">
-                            <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
-                            <div class="tags">
-                                <div class="tag">HTML</div>
-                                <div class="tag">CSS</div>
-                            </div>
-                        </div>
+                        <p>Placeholder guide</p>
                     </a>
                 </article>
 
-                <article class="guide-card">
+                <article class="guide-card placeholder-guide">
                     <a href="#">
-                        <img src="./assets/img/guide2.png" alt="thumbnail">
-                        <div class="content">
-                            <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
-                            <div class="tags">
-                                <div class="tag">HTML</div>
-                                <div class="tag">CSS</div>
-                            </div>
-                        </div>
+                        <p>Placeholder guide</p>
                     </a>
                 </article>
 
-                <article class="guide-card">
+                <article class="guide-card placeholder-guide">
                     <a href="#">
-                        <img src="./assets/img/guide2.png" alt="thumbnail">
-                        <div class="content">
-                            <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
-                            <div class="tags">
-                                <div class="tag">HTML</div>
-                                <div class="tag">CSS</div>
-                            </div>
-                        </div>
+                        <p>Placeholder guide</p>
+                    </a>
+                </article>
+
+                <article class="guide-card placeholder-guide">
+                    <a href="#">
+                        <p>Placeholder guide</p>
+                    </a>
+                </article>
+
+                <article class="guide-card placeholder-guide">
+                    <a href="#">
+                        <p>Placeholder guide</p>
+                    </a>
+                </article>
+
+                <article class="guide-card placeholder-guide">
+                    <a href="#">
+                        <p>Placeholder guide</p>
+                    </a>
+                </article>
+
+                <article class="guide-card placeholder-guide">
+                    <a href="#">
+                        <p>Placeholder guide</p>
+                    </a>
+                </article>
+
+                <article class="guide-card placeholder-guide">
+                    <a href="#">
+                        <p>Placeholder guide</p>
                     </a>
                 </article>
             </div>

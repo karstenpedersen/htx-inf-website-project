@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
 :root {
   --clr-primary: #6200ff;
   --clr-light: #FFFFFF;
@@ -399,8 +401,26 @@ section.section-icons .icons .icon p {
   font-size: var(--fs-smaller);
   padding: 0 0.5rem;
   line-height: 1.5em;
+  border-radius: 3px;
   color: var(--clr-on-primary);
   background-color: var(--clr-primary);
+}
+
+.guide-card.placeholder-guide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.guide-card.placeholder-guide p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
 }
 
 #button-back-to-top {
@@ -468,72 +488,46 @@ header #header-container .header-menu {
           align-items: center;
 }
 
-header #header-container .header-menu nav {
-  /*.nav-links {
-                    display: flex;
-                    justify-content: space-around;
-                    margin-right: 24px;
-                    
-                    .dropdown {
-                        padding: 12px 24px;
-                        margin-left: 16px;
-                        cursor: pointer;
-
-                        .title {
-                            color: black;
-                            font-size: var(--fs-medium);
-                            font-weight: 700;
-
-                            &:hover {
-                                color: var(--clr-primary);
-                            }
-                        }
-                        
-                        .content {
-                            display: none;
-                            position: absolute;
-                            background-color: blue;
-                            min-width: 160px;
-                            z-index: 11;
-
-                            a {
-                                color: black;
-                                padding: 12px 16px;
-                            }
-                        }
-
-                        &:hover {
-                            .content {
-                                display: block;
-                            }
-                        }
-                    }
-                }*/
-}
-
 header #header-container .header-menu nav .nav-menus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 1.5rem;
   gap: 1rem;
 }
 
 header #header-container .header-menu nav .nav-menus .menu {
-  padding: 0.5rem 1rem;
   position: relative;
+  cursor: pointer;
 }
 
-header #header-container .header-menu nav .nav-menus .menu .menu-name {
+header #header-container .header-menu nav .nav-menus .menu .title {
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #header-container .header-menu nav .nav-menus .menu .title .menu-name {
   color: black;
   font-size: var(--fs-medium);
   font-weight: 700;
 }
 
-header #header-container .header-menu nav .nav-menus .menu .menu-name:hover {
+header #header-container .header-menu nav .nav-menus .menu .title .menu-name:hover {
   color: var(--clr-primary);
+}
+
+header #header-container .header-menu nav .nav-menus .menu .title i {
+  font-size: 1.75rem;
 }
 
 header #header-container .header-menu nav .nav-menus .menu ul {
@@ -542,10 +536,14 @@ header #header-container .header-menu nav .nav-menus .menu ul {
   background-color: var(--clr-background);
   border-end-start-radius: 5px;
   border-end-end-radius: 5px;
+  padding: 0.5rem 1rem;
+  padding-top: 15px;
+  min-width: 128px;
 }
 
 header #header-container .header-menu nav .nav-menus .menu ul li {
-  padding: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 header #header-container .header-menu nav .nav-menus .menu ul li a {
@@ -560,6 +558,10 @@ header #header-container .header-menu nav .nav-menus .menu ul li a:hover {
 
 header #header-container .header-menu nav .nav-menus .menu:hover ul {
   display: block;
+}
+
+header #header-container .header-menu nav .nav-menus .menu:hover:hover .title .menu-name {
+  color: var(--clr-primary);
 }
 
 header #header-container .header-menu .profile-container {
@@ -626,6 +628,15 @@ header #header-container .burger div {
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
     opacity: 1;
+  }
+  header #header-container .header-menu .nav-menus {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   header #header-container .header-menu .nav-links {
     width: 100%;
@@ -850,14 +861,59 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
 
 .slideshow {
   width: 100%;
+  height: 540px;
+  margin-bottom: 4rem;
   margin-inline: auto;
   position: relative;
 }
 
-.slideshow .image {
-  width: 100%;
+.slideshow .slide-content {
+  height: inherit;
+}
+
+.slideshow .slide-content .image {
+  width: inherit;
+  height: inherit;
   display: none;
-  border-radius: 5px;
+  position: absolute;
+}
+
+.slideshow .slide-content .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.slideshow .slide-content .image .text {
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 1rem 5rem;
+}
+
+.slideshow .slide-content .image .text h5 {
+  color: white;
+  font-size: 1.75rem;
+}
+
+.slideshow .slide-content .image .text p {
+  color: white;
+}
+
+.slideshow .slide-content .image .text.left {
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.slideshow .slide-content .image .text.right {
+  right: 0;
+  border-top-left-radius: 10px;
 }
 
 .slideshow .navigation {

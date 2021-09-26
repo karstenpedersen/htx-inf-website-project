@@ -32,20 +32,31 @@ header {
                 .nav-menus {
                     display: flex;
                     justify-content: space-around;
+                    align-items: center;
                     margin-right: 1.5rem;
                     gap: 1rem;
-
-                    .menu {
-                        padding: 0.5rem 1rem;
+                
+                    .menu {                        
                         position: relative;
+                        cursor: pointer;
 
-                        .menu-name {
-                            color: black;
-                            font-size: var(--fs-medium);
-                            font-weight: 700;
+                        .title {
+                            padding: 0.5rem 1rem;
+                            display: flex;
+                            align-items: center;
 
-                            &:hover {
-                                color: var(--clr-primary);
+                            .menu-name {
+                                color: black;
+                                font-size: var(--fs-medium);
+                                font-weight: 700;
+    
+                                &:hover {
+                                    color: var(--clr-primary);
+                                }
+                            }
+
+                            i {
+                                font-size: 1.75rem;
                             }
                         }
 
@@ -53,12 +64,17 @@ header {
                             display: none;
                             position: absolute;
                             background-color: var(--clr-background);
-                            
+                         
                             border-end-start-radius: 5px;
                             border-end-end-radius: 5px;
+                            
+                            padding: 0.5rem 1rem;
+                            padding-top: 15px;
+                            min-width: 128px;
 
                             li {
-                                padding: 0.25rem;
+                                padding-top: 0.25rem;
+                                padding-bottom: 0.25rem;
 
                                 a {
                                     color: black;
@@ -76,50 +92,21 @@ header {
                             ul {
                                 display: block;
                             }
+
+                            &:hover {
+                                .title {
+                                    .menu-name {
+                                        color: var(--clr-primary);
+                                    }
+        
+                                    i {
+                                        //color: var(--clr-primary);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-
-                /*.nav-links {
-                    display: flex;
-                    justify-content: space-around;
-                    margin-right: 24px;
-                    
-                    .dropdown {
-                        padding: 12px 24px;
-                        margin-left: 16px;
-                        cursor: pointer;
-
-                        .title {
-                            color: black;
-                            font-size: var(--fs-medium);
-                            font-weight: 700;
-
-                            &:hover {
-                                color: var(--clr-primary);
-                            }
-                        }
-                        
-                        .content {
-                            display: none;
-                            position: absolute;
-                            background-color: blue;
-                            min-width: 160px;
-                            z-index: 11;
-
-                            a {
-                                color: black;
-                                padding: 12px 16px;
-                            }
-                        }
-
-                        &:hover {
-                            .content {
-                                display: block;
-                            }
-                        }
-                    }
-                }*/
             }
             
             .profile-container {
@@ -175,6 +162,11 @@ header {
                 transform: translateX(100%);
                 transition: transform 0.5s ease-in;
                 opacity: 1;
+
+                .nav-menus {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
     
                 .nav-links {
                     width: 100%;

@@ -1,5 +1,8 @@
 //This file should be imported first in all SCSS/SASS files.
 
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 @import "variables";
 @import "mixins";
 
@@ -361,15 +364,26 @@ section {
             display: flex;
             gap: 0.5rem;
             margin-top: 0.75rem;
-    
+            
             .tag {
                 font-size: var(--fs-smaller);
                 padding: 0 0.5rem;
                 line-height: 1.5em;
+                border-radius: 3px;
                 
                 color: var(--clr-on-primary);
                 background-color: var(--clr-primary);
             }
+        }
+    }
+    
+    &.placeholder-guide {
+        display: flex;
+        flex-direction: column;
+        
+        p {
+            flex: 1;
+            text-align: center;
         }
     }
 }
