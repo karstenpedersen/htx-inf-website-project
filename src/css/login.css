@@ -966,4 +966,179 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
 .slideshow .navigation span:hover {
   background-color: var(--clr-primary);
 }
-/*# sourceMappingURL=index.css.map */
+
+.section-account {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 10px var(--clr-shadow);
+          box-shadow: 0px 1px 10px var(--clr-shadow);
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'left-area rigth-area';
+}
+
+.section-account .left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left-area;
+}
+
+.section-account .left .header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.section-account .left .header p {
+  color: var(--clr-text-underline);
+  font-size: 24px;
+  margin-bottom: 0.75rem;
+}
+
+.section-account .left .header .logo-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-account .left .content-container {
+  padding: 1rem;
+}
+
+.section-account .left .content-container .content {
+  background-color: var(--clr-on-primary);
+  border-radius: 15px;
+  padding: 2rem 1rem;
+  width: 60%;
+  margin-inline: auto;
+}
+
+.section-account .left .content-container .content .info-text {
+  color: var(--clr-text-underline);
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-account .left .content-container .content .account-form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px 0px;
+  margin-bottom: 2rem;
+  border-bottom: solid var(--clr-text-underline) 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-account .left .content-container .content .account-form .input-container i {
+  margin-top: -8px;
+  font-size: 28px;
+  margin-right: 1rem;
+}
+
+.section-account .left .content-container .content .account-form .input-container input, .section-account .left .content-container .content .account-form .input-container textarea {
+  font-size: 18px;
+  padding: 4px 0px;
+  outline: none;
+}
+
+.section-account .left .content-container .content .account-form .input-container input:focus, .section-account .left .content-container .content .account-form .input-container textarea:focus {
+  outline: none;
+}
+
+.section-account .left .content-container .content .account-form .input-container:hover {
+  border-color: var(--clr-primary);
+}
+
+.section-account .left .content-container .content .account-form button {
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.section-account .left .content-container .content .switch-type {
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-account .left .content-container .content .switch-type a {
+  color: var(--clr-text-underline);
+  font-size: 13px;
+}
+
+.section-account .left .content-container .content .break {
+  margin-block: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-account .left .content-container .content .break h4 {
+  color: var(--clr-text-underline);
+  margin-inline: 1rem;
+}
+
+.section-account .left .content-container .content .break hr {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 4px;
+  color: var(--clr-text-underline);
+  background-color: var(--clr-text-underline);
+}
+
+.section-account .left .content-container .content .alternate-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.section-account .left .content-container .content .alternate-login div {
+  background-color: var(--clr-text-underline);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .section-account .left .content-container .content {
+    width: 100%;
+  }
+}
+
+.section-account .right {
+  background-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .section-account .right {
+    display: none;
+  }
+}
+
+.section-account.sign-in {
+  display: block;
+}
+
+.section-account.register {
+  display: none;
+}
+/*# sourceMappingURL=login.css.map */

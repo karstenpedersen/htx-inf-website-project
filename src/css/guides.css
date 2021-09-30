@@ -78,6 +78,22 @@ a.link {
   text-decoration: underline;
 }
 
+a.login {
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+  color: var(--clr-surface);
+  background-color: var(--clr-on-surface);
+}
+
+a.login:hover {
+  background-color: var(--clr-primary);
+}
+
 label {
   font-size: var(--fs-small);
   color: var(--clr-on-footer-variant);
@@ -300,6 +316,15 @@ section.section-icons .icons .icon p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.logo-container.logo-large img {
+  width: 4rem;
+  margin-right: 1.25rem;
+}
+
+.logo-container.logo-large h4 {
+  font-size: 32px;
 }
 
 .logo-container.logo-normal .text {
@@ -576,7 +601,7 @@ header #header-container .header-menu .profile-container {
           justify-content: flex-end;
 }
 
-header #header-container .header-menu .profile-container button {
+header #header-container .header-menu .profile-container a.login {
   padding: 12px 28px;
   border-radius: 5px;
 }

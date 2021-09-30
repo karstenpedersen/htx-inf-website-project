@@ -1,0 +1,153 @@
+@import "default";
+@import "header";
+@import "footer";
+@import "slideshow";
+
+
+.section-account {
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px var(--clr-shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 'left-area rigth-area';
+
+    .left {
+        grid-area: left-area;
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+
+            p {
+                color: var(--clr-text-underline);
+                font-size: 24px;
+                margin-bottom: 0.75rem;
+            }
+
+            .logo-container {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .content-container {
+          
+            padding: 1rem;
+
+            .content {
+                background-color: var(--clr-on-primary);
+                border-radius: 15px;
+                padding: 2rem 1rem;
+                width: 60%;
+                margin-inline: auto;
+
+                .info-text {
+                    color: var(--clr-text-underline);
+                    font-size: 1.1rem;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+
+                .account-form {
+                    .input-container {
+                        display: flex;
+                        padding: 2px 0px;
+                        margin-bottom: 2rem;
+                        border-bottom: solid var(--clr-text-underline) 3px;
+                        align-items: center;
+                    
+                        i {
+                            margin-top: -8px;
+                            font-size: 28px;
+                            margin-right: 1rem;
+                        }
+
+                        input {
+                            font-size: 18px;
+                            padding: 4px 0px;
+                            outline: none;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        &:hover {
+                            border-color: var(--clr-primary);
+                        }
+                    }
+
+                    button {
+                        width: 100%;
+                        border-radius: 5px;
+                        height: 50px;
+                    }
+                }
+
+                .switch-type {
+                    max-width: 400px;
+                    margin-inline: auto;
+                    margin-top: 1.2rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        color: var(--clr-text-underline);
+                        font-size: 13px;
+                    }
+                }
+
+                .break {
+                    margin-block: 1.25rem;
+                    display: flex;
+                    align-items: center;
+
+                    h4 {
+                        color: var(--clr-text-underline);
+                        margin-inline: 1rem;
+                    }
+
+                    hr {
+                        flex: 1;
+                        height: 4px;
+                        color: var(--clr-text-underline);
+                        background-color: var(--clr-text-underline);
+                    }
+                }
+
+                .alternate-login {
+                    display: flex;
+                    justify-content: space-around;
+                    max-width: 400px;
+                    margin-inline: auto;
+
+                    div {
+                        background-color: var(--clr-text-underline);
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .right {
+        background-color: blue;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &.sign-in {
+        display: block;
+    }
+
+    &.register {
+        display: none;
+    }
+}
+
