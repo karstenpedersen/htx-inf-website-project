@@ -859,7 +859,13 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
   }
 }
 
-.search-bar {
+.search-section {
+  background-color: var(--clr-surface-variant);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.search-section .search-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,7 +874,80 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
           align-items: center;
 }
 
-.search-bar input, .search-bar textarea {
+.search-section .search-bar input, .search-section .search-bar textarea {
   background-color: var(--clr-background);
+  padding: 6px 12px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-section .search-bar button {
+  background-color: var(--clr-on-surface-variant);
+  border-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search-section .search-bar button:hover {
+  background-color: var(--clr-primary);
+}
+
+.search-section .tags-bar {
+  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-section .tags-bar .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.search-section .tags-bar .tags .tag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: var(--fs-smaller);
+  line-height: 1.5em;
+  color: var(--clr-on-primary);
+  background-color: var(--clr-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-section .tags-bar .tags .tag.add {
+  color: var(--clr-primary);
+  background-color: var(--clr-on-primary);
+}
+
+.search-section .tags-bar .tags .tag:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-on-primary);
+}
+
+.search-section .tags-bar .tags .tag:hover.add {
+  color: var(--clr-on-primary);
+  background-color: var(--clr-primary);
+}
+
+.search-section .tags-bar .add-tag {
+  font-size: var(--fs-smaller);
+  padding: 0 0.5rem;
+  line-height: 1.5em;
+  border-radius: 3px;
+  color: var(--clr-on-primary);
+  background-color: var(--clr-primary);
 }
 /*# sourceMappingURL=guides.css.map */

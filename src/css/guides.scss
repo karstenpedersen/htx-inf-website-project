@@ -2,11 +2,86 @@
 @import "header";
 @import "footer";
 
-.search-bar {
-    display: flex;
-    align-items: center;
 
-    input {
-        background-color: var(--clr-background);
+.search-section {
+    background-color: var(--clr-surface-variant);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+    
+        input {
+            background-color: var(--clr-background);
+            padding: 6px 12px;
+            border: none;
+            margin-top: 8px;
+            
+            font-size: 17px;
+    
+            border-radius: 30px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    
+        button {
+            background-color: var(--clr-on-surface-variant);
+            border-radius: 30px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &:hover {
+                background-color: var(--clr-primary);
+            }
+        }
+    }
+    
+    .tags-bar {
+        margin-top: 1rem;
+        align-items: center;
+    
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+    
+            .tag {
+                padding: 0.25rem 0.5rem;
+                border-radius: 3px;
+                font-size: var(--fs-smaller);
+                line-height: 1.5em;
+                color: var(--clr-on-primary);
+                background-color: var(--clr-primary);
+                display: flex;
+                gap: 8px;
+                align-items: center;
+    
+                &.add {
+                    color: var(--clr-primary);
+                    background-color: var(--clr-on-primary);
+                }
+    
+                &:hover {
+                    color: var(--clr-primary);
+                    background-color: var(--clr-on-primary);
+                    
+                    &.add {
+                        color: var(--clr-on-primary);
+                        background-color: var(--clr-primary);
+                    }
+                }
+            }
+        }
+    
+        .add-tag {
+            font-size: var(--fs-smaller);
+            padding: 0 0.5rem;
+            line-height: 1.5em;
+            border-radius: 3px;
+            
+            color: var(--clr-on-primary);
+            background-color: var(--clr-primary);
+        }
     }
 }
