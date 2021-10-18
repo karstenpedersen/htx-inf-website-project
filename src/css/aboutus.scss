@@ -1,0 +1,50 @@
+@import "default";
+@import "header";
+@import "footer";
+
+.person {
+    background-color: var(--clr-surface);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    .content {
+        padding: 1rem;
+        word-wrap: break-word;
+        text-align: center;
+
+        .navn {
+            font-weight: 700;
+            padding-block: 0.25rem;
+        }
+    }
+}
+
+.gallery {
+    margin: 5px;
+    border: 1px #121212;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 1rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .desc {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.faq-questions {
+    
+    .item {
+        margin-bottom: 1rem;
+
+        .question {
+            color: var(--clr-text-underline);
+            margin-bottom: 0.25rem;
+        }
+    }
+}

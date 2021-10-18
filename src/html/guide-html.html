@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/guides.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/guide.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>WEB BRAIN</title>
@@ -55,34 +58,137 @@
         </div>
     </header>
 
-    <!-- Main -->
+    <!-- Main section -->
     <div class="wrapper">
-        <!-- Search section -->
-        <section class="search-section">
-            <div class="search-bar">
-                <input type="text" placeholder="Search guides...">
-                <button class="material-icons button-primary search-button">search</button>
+        <section class="section-guide">
+            <div class="section-header">
+                <h1>Beginner HTML</h1>
+                <p class="writer">Written by <a href="https://www.w3schools.com" target="_blank">https://www.w3schools.com</a>. Inserted by Magnus Jens Ingemansen.</p>
+                <p class="description">HTML is a standard language used in connection with the creation of websites. HTML is an abbreviation for Hyper Text Markup Language and is used to describe the structure of a website. </p>
             </div>
 
-            <div class="tags-bar">
-                <h5>Tags</h5>
-                <div class="tags">
-                    <button class="tag">HTML</button>
-                    <button class="tag">CSS</button>
-                    <button class="tag">JavaScript</button>
-                    <button class="tag add">+</button>
+            <div class="content">
+                <div class="content-block">
+                    <h2>Elements</h2>
+                    <p>
+                        HTML consists of a number of different elements. These elements tell the browser how to display the content on the page.
+                    </p>
+
+                    <div class="code-example">
+                        <div class="section">
+                            <h3 class="header">Code</h3>
+                            <div class="code">
+                                <xmp class="html"><tagname>Content should be...</tagname></xmp>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2>Headers</h2>
+                    <p>
+                        To make headlines or headers, one has to use and number and prioritize it according to which header is most important. 
+                        In this case, the main header. Example:
+                    </p>
+                    
+                    <div class="code-example">
+                        <div class="section">
+                            <h3 class="header">Code</h3>
+                            <div class="code">
+                                <xmp class="html"><h1>This is header 1</h1></xmp>
+                                <xmp class="html"><h2>This is header 2</h2></xmp>
+                                <xmp class="html"><h3>This is header 3</h3></xmp>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3 class="header">Result</h3>
+                            <div class="result default">
+                                <h1>This is header 1</h1>
+                                <h2>This is header 2</h2>
+                                <h3>This is header 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2>Paragraphs</h2>
+                    <p>
+                        In these paragraphs or sections, all your body text will be in. They make them using the tag that marks where your paragraphs should be. Example:
+                    </p>
+
+                    <div class="code-example">
+                        <div class="section">
+                            <h3 class="header">Code</h3>
+                            <div class="code">
+                                <xmp class="html"><p>This is a paragraph</p></xmp>
+                                <xmp class="html"><p>This is another paragraph</p></xmp>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3 class="header">Result</h3>
+                            <div class="result default">
+                                <p>This is a paragraph</p>
+                                <p>This is another paragraph</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2>HTML document setup</h2>
+                    <p>
+                        HTML documents are where you encode HTML in. All HTML documents must start with a document type statement: <! DOCTYPE html>. 
+                        It starts with html declaration and ends with a html declaration. Finally, the visible parts of websites are inside the "body" of it.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Images</h2>
+                    <p>
+                        The HTML image tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The image tag creates a holding space for the referenced image.
+                        The image tag is empty, it contains attributes only, and does not have a closing tag.
+                    </p>
+                </div>
+
+                <div class="content-block">
+                    <h2>Colors</h2>
+                    <p>
+                        HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values. 
+                        In HTML, a color can be specified by using a color name:
+                    </p>
+
+                    <img alt="CDN" src="https://cdn.educba.com/academy/wp-content/uploads/2019/12/HTML-Colors-.png">
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Card section -->
+    <!-- More section -->
+    <section class="section-background section-guide">
+        <div class="wrapper-margin">
+            <div class="content-block video">
+                <h2>HTML tutorial for beginners</h2>
+                <p class="creator">Video tutorial by <a href="https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA" target="_blank">Programming with Mosh.</a></p>
+                <p class="description">HTML Tutorial for Beginners - Learn HTML for a career in web development. This HTML tutorial teaches you everything you need to get started.</p>
+                <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        <!-- Featured guides -->
         <section class="section-header">
             <div class="header">
-                <h1>Search results</h1>
+                <h1>Similar Guides</h1>
+                <a class="link" href="/src/html/guides.html">See More</a>
             </div>
+            
             <div class="card-grid">
                 <article class="guide-card">
-                    <a href="#">
+                    <a href="/src/html/guide-html.html">
                         <img src="/assets/img/guides/stock-html.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner HTML</h4>

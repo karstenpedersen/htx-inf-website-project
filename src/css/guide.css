@@ -875,95 +875,142 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
   }
 }
 
-.search-section {
-  background-color: var(--clr-surface-variant);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+img {
+  width: 100%;
 }
 
-.search-section .search-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+iframe {
+  width: 100%;
+  min-height: 400px;
 }
 
-.search-section .search-bar input, .search-section .search-bar textarea {
-  background-color: var(--clr-background);
-  padding: 6px 12px;
-  border: none;
-  margin-top: 8px;
-  font-size: 17px;
-  border-radius: 30px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.section-guide .section-header {
+  margin-bottom: 2rem;
 }
 
-.search-section .search-bar button {
-  background-color: var(--clr-on-surface-variant);
-  border-radius: 30px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.section-guide .section-header .writer {
+  color: var(--clr-text-underline);
+  margin-bottom: 0.5rem;
 }
 
-.search-section .search-bar button:hover {
-  background-color: var(--clr-primary);
+.section-guide .section-header .writer a {
+  color: var(--clr-text-underline);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
 }
 
-.search-section .tags-bar {
+.section-guide .content-block {
+  margin-bottom: 1rem;
+}
+
+.section-guide .content-block.video .creator {
+  color: var(--clr-text-underline);
+  margin-bottom: 0.5rem;
+}
+
+.section-guide .content-block.video .creator a {
+  color: var(--clr-text-underline);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+}
+
+.section-guide .content-block.video .description {
+  margin-bottom: 1rem;
+}
+
+.code-example {
   margin-top: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 1rem;
+  background-color: var(--clr-surface-variant);
+  border-radius: 5px;
 }
 
-.search-section .tags-bar .tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+.code-example .section .code {
+  background-color: var(--clr-dark);
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
-.search-section .tags-bar .tags .tag {
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-size: var(--fs-smaller);
-  line-height: 1.5em;
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.code-example .section .code * {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.search-section .tags-bar .tags .tag.add {
-  color: var(--clr-primary);
-  background-color: var(--clr-on-primary);
+.default {
+  all: initial;
 }
 
-.search-section .tags-bar .tags .tag:hover {
-  color: var(--clr-primary);
-  background-color: var(--clr-on-primary);
+.default * {
+  all: unset;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.search-section .tags-bar .tags .tag:hover.add {
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
+.default h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
-.search-section .tags-bar .add-tag {
-  font-size: var(--fs-smaller);
-  padding: 0 0.5rem;
-  line-height: 1.5em;
-  border-radius: 3px;
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
+.default h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
-/*# sourceMappingURL=guides.css.map */
+
+.default h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.default h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.default h5 {
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.default h6 {
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.default p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*# sourceMappingURL=guide.css.map */

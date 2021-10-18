@@ -875,95 +875,49 @@ footer .wrapper .legal-information a, footer .wrapper-margin .legal-information 
   }
 }
 
-.search-section {
-  background-color: var(--clr-surface-variant);
-  padding: 0.5rem 1rem;
+.person {
+  background-color: var(--clr-surface);
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.search-section .search-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.person .content {
+  padding: 1rem;
+  word-wrap: break-word;
+  text-align: center;
 }
 
-.search-section .search-bar input, .search-section .search-bar textarea {
-  background-color: var(--clr-background);
-  padding: 6px 12px;
-  border: none;
-  margin-top: 8px;
-  font-size: 17px;
-  border-radius: 30px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.person .content .navn {
+  font-weight: 700;
+  padding-block: 0.25rem;
 }
 
-.search-section .search-bar button {
-  background-color: var(--clr-on-surface-variant);
-  border-radius: 30px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.gallery {
+  margin: 5px;
+  border: 1px #121212;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-.search-section .search-bar button:hover {
-  background-color: var(--clr-primary);
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 
-.search-section .tags-bar {
-  margin-top: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.gallery .desc {
+  padding: 15px;
+  text-align: center;
 }
 
-.search-section .tags-bar .tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+.faq-questions .item {
+  margin-bottom: 1rem;
 }
 
-.search-section .tags-bar .tags .tag {
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-size: var(--fs-smaller);
-  line-height: 1.5em;
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.faq-questions .item .question {
+  color: var(--clr-text-underline);
+  margin-bottom: 0.25rem;
 }
-
-.search-section .tags-bar .tags .tag.add {
-  color: var(--clr-primary);
-  background-color: var(--clr-on-primary);
-}
-
-.search-section .tags-bar .tags .tag:hover {
-  color: var(--clr-primary);
-  background-color: var(--clr-on-primary);
-}
-
-.search-section .tags-bar .tags .tag:hover.add {
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
-}
-
-.search-section .tags-bar .add-tag {
-  font-size: var(--fs-smaller);
-  padding: 0 0.5rem;
-  line-height: 1.5em;
-  border-radius: 3px;
-  color: var(--clr-on-primary);
-  background-color: var(--clr-primary);
-}
-/*# sourceMappingURL=guides.css.map */
+/*# sourceMappingURL=aboutus.css.map */
