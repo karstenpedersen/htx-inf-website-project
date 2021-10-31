@@ -1,2 +1,5 @@
+This is a school project made for the subject Informatik.
 
-This project uses HTML, SCSS and Typescript.
+It uses HTML, SCSS and Typescript.
+
+Guides where taken from: https://www.w3schools.com.
