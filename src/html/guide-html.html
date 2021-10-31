@@ -6,60 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/guide.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/guide.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <title>WEB BRAIN</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div id="header-container">
-            <a class="logo-container logo-normal" href="/index.html">
-                <img src="/assets/img/web-learn-logo.svg" alt="logo">
-                <div class="text">
-                    <h4 class="company-name">WEB BRAIN</h4>
-                </div>
-            </a>
+    <header id="header"></header>
 
-            <div class="header-menu">
-                <nav>
-                    <ul class="nav-menus">
-                        <li class="menu">
-                            <a class="title" href="/src/html/guides.html">
-                                <p class="menu-name">Guides</p>
-                            </a>
-                        </li>
-                        <li class="menu">
-                            <div class="title">
-                                <p class="menu-name" href="#">More</p>
-                                <i class="material-icons">arrow_drop_down</i>
-                            </div>
-                            <ul>
-                                <li><a href="/src/html/aboutus.html">About Us</a></li>
-                                <li><a href="/src/html/faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-    
-                <div class="profile-container">
-                    <a class="login" href="/src/html/login.html"><button class="button-primary">Sign In</button></a>
-                </div>
-            </div>
-
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main section -->
+    <!-- Sidens indhold -->
     <div class="wrapper">
+        <!-- Guide sektion -->
         <section class="section-guide">
             <div class="section-header">
                 <h1>Beginner HTML</h1>
@@ -78,7 +38,7 @@
                         <div class="section">
                             <h3 class="header">Code</h3>
                             <div class="code">
-                                <xmp class="html"><tagname>Content should be...</tagname></xmp>
+                                <xmp class="html"><tagname>Content should be here...</tagname></xmp>
                             </div>
                         </div>
                     </div>
@@ -88,7 +48,7 @@
                     <h2>Headers</h2>
                     <p>
                         To make headlines or headers, one has to use and number and prioritize it according to which header is most important. 
-                        In this case, the main header. Example:
+                        In this case, the main header. You use <code class="highlight">h1</code>, <code class="highlight">h2</code> and so on. Example:
                     </p>
                     
                     <div class="code-example">
@@ -115,7 +75,7 @@
                 <div class="content-block">
                     <h2>Paragraphs</h2>
                     <p>
-                        In these paragraphs or sections, all your body text will be in. They make them using the tag that marks where your paragraphs should be. Example:
+                        In these paragraphs or sections, all your body text will be in. They make them using the tag <code class="highlight">p</code> that marks where your paragraphs should be. Example:
                     </p>
 
                     <div class="code-example">
@@ -140,8 +100,8 @@
                 <div class="content-block">
                     <h2>HTML document setup</h2>
                     <p>
-                        HTML documents are where you encode HTML in. All HTML documents must start with a document type statement: <! DOCTYPE html>. 
-                        It starts with html declaration and ends with a html declaration. Finally, the visible parts of websites are inside the "body" of it.
+                        HTML documents are where you encode HTML in. All HTML documents must start with a document type statement: <code class="highlight">&lt;! DOCTYPE html&gt;</xmp></code>. 
+                        It starts with html declaration and ends with a html declaration. Finally, the visible parts of websites are inside the <code class="highlight">"body"</code> of it.
                     </p>
                 </div>
 
@@ -149,7 +109,7 @@
                     <h2>Images</h2>
                     <p>
                         The HTML image tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The image tag creates a holding space for the referenced image.
-                        The image tag is empty, it contains attributes only, and does not have a closing tag.
+                        The image tag <code class="highlight">img</code> is empty, it contains attributes only, and does not have a closing tag.
                     </p>
                 </div>
 
@@ -166,7 +126,7 @@
         </section>
     </div>
 
-    <!-- More section -->
+    <!-- More sektion -->
     <section class="section-background section-guide">
         <div class="wrapper-margin">
             <div class="content-block video">
@@ -179,34 +139,34 @@
     </section>
 
     <div class="wrapper">
-        <!-- Featured guides -->
+        <!-- Featured guides sektion -->
         <section class="section-header">
             <div class="header">
                 <h1>Similar Guides</h1>
-                <a class="link" href="/src/html/guides.html">See More</a>
+                <a class="link" href="../../src/html/guides.html">See More</a>
             </div>
             
             <div class="card-grid">
                 <article class="guide-card">
-                    <a href="/src/html/guide-html.html">
-                        <img src="/assets/img/guides/stock-html.jpg" alt="thumbnail">
+                    <a href="../../src/html/guide-html.html">
+                        <img src="../../assets/img/guides/stock-html.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner HTML</h4>
-                            <p class="creator">Karsten Pedersen</p>
+                            <p class="creator">Magnus Ingemansen</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
-                                <div class="tag">IDE</div>
+                                <div class="tag">BEGINNER</div>
                             </div>
                         </div>
                     </a>
                 </article>
 
                 <article class="guide-card">
-                    <a href="#">
-                        <img src="/assets/img/guides/stock-code.jpg" alt="thumbnail">
+                    <a href="../../src/html/guide-css.html">
+                        <img src="../../assets/img/guides/stock-code.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
+                            <p class="creator">Lucas Engsbye</p>
                             <div class="tags">
                                 <div class="tag">CSS</div>
                                 <div class="tag">STYLESHEET</div>
@@ -217,10 +177,10 @@
 
                 <article class="guide-card">
                     <a href="#">
-                        <img src="/assets/img/guides/stock-teamwork.jpg" alt="thumbnail">
+                        <img src="../../assets/img/guides/stock-teamwork.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Rasmus Sejer</p>
+                            <p class="creator">Placeholder Guide</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                                 <div class="tag">CSS</div>
@@ -231,10 +191,10 @@
 
                 <article class="guide-card">
                     <a href="#">
-                        <img src="/assets/img/guides/stock-coding.jpg" alt="thumbnail">
+                        <img src="../../assets/img/guides/stock-coding.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Modern HTML Frontpage</h4>
-                            <p class="creator">Magnus</p>
+                            <p class="creator">Placeholder Guide</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                                 <div class="tag">CSS</div>
@@ -253,22 +213,22 @@
             <div class="content">
                 <div class="company">
                     <div class="logo-container logo-small">
-                        <img src="/assets/img/web-learn-logo.svg" alt="logo">
+                        <img src="../../assets/img/web-learn-logo.svg" alt="logo">
                         <h4 class="company-name">WEB BRAIN</h4>
                     </div>
     
                     <div class="socials">
-                        <a href="https://www.facebook.com" target="_blank"><img src="/assets/icons/facebook_logo.svg" alt="facebook"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="/assets/icons/instagram_logo.svg" alt="instagram"></a>
-                        <a href="https://www.youtube.com" target="_blank"><img src="/assets/icons/youtube_logo.svg" alt="youtube"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="../../assets/icons/facebook_logo.svg" alt="facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="../../assets/icons/instagram_logo.svg" alt="instagram"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="../../assets/icons/youtube_logo.svg" alt="youtube"></a>
                     </div>
                 </div>
     
                 <div class="website-links">
                     <h4 class="header">Quick Links</h4>
                     <ul>
-                        <li><a href="/index.html" class="link">Home</a></li>
-                        <li><a href="/src/html/guides.html" class="link">Guides</a></li>
+                        <li><a href="../../index.html" class="link">Home</a></li>
+                        <li><a href="../../src/html/guides.html" class="link">Guides</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -280,8 +240,8 @@
                 <div class="support-links">
                     <h4 class="header">Support</h4>
                     <ul>
-                        <li><a href="/src/html/aboutus.html" class="link">About Us</a></li>
-                        <li><a href="/src/html/faq.html" class="link">FAQ</a></li>
+                        <li><a href="../../src/html/aboutus.html" class="link">About Us</a></li>
+                        <li><a href="../../src/html/faq.html" class="link">FAQ</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -317,9 +277,10 @@
     <!-- Back to top button -->
     <i id="button-back-to-top" class="material-icons hide">arrow_upward</i>
 
-    <!-- JavaScript -->
-    <script src="/src/js/default.js"></script>
-    <script src="/src/js/slideshow.js"></script>
-    <script src="/src/js/index.js"></script>
+    <!-- JavaScripts -->
+    <script src="../../src/js/template.js"></script>
+    <script src="../../src/js/default.js"></script>
+    <script src="../../src/js/slideshow.js"></script>
+    <script src="../../src/js/index.js"></script>
 </body>
 </html>

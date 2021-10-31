@@ -48,6 +48,11 @@ p {
 
 li {
     list-style: none;
+
+    &.number-list-item {
+        list-style: decimal;
+        list-style-position: inside;
+    }
 }
 
 a {

@@ -63,12 +63,32 @@ iframe {
             line-height: 2rem;
             margin-bottom: 1rem;
 
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+
             * {
                 color: white;
                 font-family: 'Roboto Mono', monospace;
             }
         }
+
+        .result {
+            &.css {
+                background-color: white;
+                border-radius: 5px;
+                padding: 1rem;
+            }
+        }
     }
+}
+
+.number-list-item {
+    margin-top: 2rem;
+}
+
+.highlight {
+    color: var(--clr-primary);
+    background-color: var(--clr-surface-variant);
 }
 
 .default {
@@ -143,5 +163,12 @@ iframe {
         margin-bottom: 1em;
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+xmp {
+    &.inline {
+        white-space:pre-wrap;
+        word-wrap:break-word;
     }
 }

@@ -1,0 +1,52 @@
+@import "default";
+@import "header";
+@import "footer";
+
+
+.webbrain-theme-border {
+    border-color: #6200ff;
+}
+
+.webbrain-theme {
+    color: #ffffff;
+}
+
+ #rcorners1 {
+    border-radius: 25px;
+    background: #6200ff;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #6200ff;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+#rcorners3 {
+    border-radius: 25px;
+    background: url(/assets/img/guides/paper.jpg);
+    background-size: contain;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+.example-code{
+    border-radius: 8px;
+    background: #e9e7e7;
+    padding: 5px;
+}
+
+.webbrain-code{
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 10px;
+    margin: 30px;
+}

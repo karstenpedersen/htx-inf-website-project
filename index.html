@@ -6,58 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>WEB BRAIN</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div id="header-container">
-            <a class="logo-container logo-normal" href="/index.html">
-                <img src="/assets/img/web-learn-logo.svg" alt="logo">
-                <div class="text">
-                    <h4 class="company-name">WEB BRAIN</h4>
-                </div>
-            </a>
-
-            <div class="header-menu">
-                <nav>
-                    <ul class="nav-menus">
-                        <li class="menu">
-                            <a class="title" href="/src/html/guides.html">
-                                <p class="menu-name">Guides</p>
-                            </a>
-                        </li>
-                        <li class="menu">
-                            <div class="title">
-                                <p class="menu-name" href="#">More</p>
-                                <i class="material-icons">arrow_drop_down</i>
-                            </div>
-                            <ul>
-                                <li><a href="/src/html/aboutus.html">About Us</a></li>
-                                <li><a href="/src/html/faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-    
-                <div class="profile-container">
-                    <a class="login" href="/src/html/login.html"><button class="button-primary">Sign In</button></a>
-                </div>
-            </div>
-
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </header>
+    <header id="header"></header>
     
     <!-- Section 1 -->
     <div class="wrapper">
-        <!-- Slideshow -->
+        <!-- Slideshow sektion -->
         <section class="section-slideshow">
             <div class="slideshow">
                 <div class="slide-content">
@@ -109,34 +68,34 @@
             </div>
         </section>
 
-        <!-- Featured guides -->
+        <!-- Featured guides sektion -->
         <section class="section-header">
             <div class="header">
                 <h1>Featured Guides</h1>
-                <a class="link" href="/src/html/guides.html">See More</a>
+                <a class="link" href="./src/html/guides.html">See More</a>
             </div>
             
             <div class="card-grid">
                 <article class="guide-card">
-                    <a href="/src/html/guide-html.html">
+                    <a href="./src/html/guide-html.html">
                         <img src="./assets/img/guides/stock-html.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner HTML</h4>
-                            <p class="creator">Karsten Pedersen</p>
+                            <p class="creator">Magnus Ingemansen</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
-                                <div class="tag">IDE</div>
+                                <div class="tag">BEGINNER</div>
                             </div>
                         </div>
                     </a>
                 </article>
 
                 <article class="guide-card">
-                    <a href="#">
+                    <a href="./src/html/guide-css.html">
                         <img src="./assets/img/guides/stock-code.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Beginner CSS</h4>
-                            <p class="creator">Dr. Lucas</p>
+                            <p class="creator">Lucas Engsbye</p>
                             <div class="tags">
                                 <div class="tag">CSS</div>
                                 <div class="tag">STYLESHEET</div>
@@ -150,7 +109,7 @@
                         <img src="./assets/img/guides/stock-teamwork.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Connect HTML with CSS</h4>
-                            <p class="creator">Rasmus Sejer</p>
+                            <p class="creator">Placeholder Guide</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                                 <div class="tag">CSS</div>
@@ -164,7 +123,7 @@
                         <img src="./assets/img/guides/stock-coding.jpg" alt="thumbnail">
                         <div class="content">
                             <h4 class="title">Modern HTML Frontpage</h4>
-                            <p class="creator">Magnus</p>
+                            <p class="creator">Placeholder Guide</p>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                                 <div class="tag">CSS</div>
@@ -177,7 +136,7 @@
         </section>
     </div>
     
-    <!--  -->
+    <!-- Ikon sektion (breakpoint) -->
     <section class="section-background section-icons">
         <div class="wrapper-margin">
             <div class="icons">
@@ -199,65 +158,131 @@
    
     <!-- Section 2 -->
     <div class="wrapper">
-        <!-- More guides -->
+        <!-- More guides sektion -->
         <section class="section-header">
             <div class="header">
                 <h1>More Guides</h1>
-                <a class="link" href="/src/html/guides.html">See More</a>
+                <a class="link" href="./src/html/guides.html">See More</a>
             </div>
             <div class="card-grid">
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/stock-working.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Coding drop down menu</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">HTML</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JS</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/istockphoto-939787416-170667a.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Advanced HTML</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">HTML</div>
+                                <div class="tag">ADVANCED</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/design-html-web-design-template-concept.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Page layout</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">HTML</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">LAYOUT</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/photo-1516259762381-22954d7d3ad2.jfif" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Advanced JavaScript</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">JS</div>
+                                <div class="tag">ADVANCED</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/working-code.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Programming Workflow</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">TIPS AND TRICKS</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/photo-1537884944318-390069bb8665.jfif" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Beginner JavaScript</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">JS</div>
+                                <div class="tag">BEGINNER</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/man-coding-in-front-of-three-computer-screens.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Backend Development</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">JS</div>
+                                <div class="tag">DATABASE</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
 
-                <article class="guide-card placeholder-guide">
+                <article class="guide-card">
                     <a href="#">
-                        <p>Placeholder guide</p>
+                        <img src="./assets/img/guides/stock-coding.jpg" alt="thumbnail">
+                        <div class="content">
+                            <h4 class="title">Modern HTML Frontpage</h4>
+                            <p class="creator">Placeholder Guide</p>
+                            <div class="tags">
+                                <div class="tag">HTML</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JS</div>
+                            </div>
+                        </div>
                     </a>
                 </article>
             </div>
         </section>
     </div>
 
-    <!-- Popular categories -->
+    <!-- Popular categories sektion -->
     <section class="section-background section-header section-lists">
         <div class="wrapper-margin">
             <div class="header">
@@ -362,13 +387,13 @@
                 </div>
             </div>
 
-            <a href="/src/html/guides.html"><button class="button-surface-hollow">Explore categories</button></a>
+            <a href="./src/html/guides.html"><button class="button-surface-hollow">Explore categories</button></a>
         </div>
     </section>
 
     <!-- Section 3 -->
     <div class="wrapper">
-        <!-- Goals -->
+        <!-- Goal sektion -->
         <section class="section-split">
             <article class="content">
                 <div class="image">
@@ -390,22 +415,22 @@
             <div class="content">
                 <div class="company">
                     <div class="logo-container logo-small">
-                        <img src="/assets/img/web-learn-logo.svg" alt="logo">
+                        <img src="./assets/img/web-learn-logo.svg" alt="logo">
                         <h4 class="company-name">WEB BRAIN</h4>
                     </div>
     
                     <div class="socials">
-                        <a href="https://www.facebook.com" target="_blank"><img src="/assets/icons/facebook_logo.svg" alt="facebook"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="/assets/icons/instagram_logo.svg" alt="instagram"></a>
-                        <a href="https://www.youtube.com" target="_blank"><img src="/assets/icons/youtube_logo.svg" alt="youtube"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="./assets/icons/facebook_logo.svg" alt="facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="./assets/icons/instagram_logo.svg" alt="instagram"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="./assets/icons/youtube_logo.svg" alt="youtube"></a>
                     </div>
                 </div>
     
                 <div class="website-links">
                     <h4 class="header">Quick Links</h4>
                     <ul>
-                        <li><a href="/index.html" class="link">Home</a></li>
-                        <li><a href="/src/html/guides.html" class="link">Guides</a></li>
+                        <li><a href="./index.html" class="link">Home</a></li>
+                        <li><a href="./src/html/guides.html" class="link">Guides</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -417,8 +442,8 @@
                 <div class="support-links">
                     <h4 class="header">Support</h4>
                     <ul>
-                        <li><a href="/src/html/aboutus.html" class="link">About Us</a></li>
-                        <li><a href="/src/html/faq.html" class="link">FAQ</a></li>
+                        <li><a href="./src/html/aboutus.html" class="link">About Us</a></li>
+                        <li><a href="./src/html/faq.html" class="link">FAQ</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -453,10 +478,10 @@
 
     <!-- Back to top button -->
     <i id="button-back-to-top" class="material-icons hide">arrow_upward</i>
-
-    <!-- JavaScript -->
-    <script src="/src/js/default.js"></script>
-    <script src="/src/js/slideshow.js"></script>
-    <script src="/src/js/index.js"></script>
+    
+    <!-- JavaScripts -->
+    <script src="./src/js/template.js"></script>
+    <script src="./src/js/default.js"></script>
+    <script src="./src/js/slideshow.js"></script>
 </body>
 </html>

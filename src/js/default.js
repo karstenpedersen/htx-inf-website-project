@@ -1,64 +1,79 @@
+// Faa fat i HTML elementer fra siden.
 const header = document.querySelector('header');
 const headerBurger = document.querySelector('.burger');
 const headerMenu = document.querySelector('.header-menu');
 const headerNavLinks = document.querySelectorAll('.nav-links li');
 const headerUser = document.querySelector('.header-menu .profile-container');
 const backToTopBtn = document.querySelector('#button-back-to-top');
-var previousScroll = window.scrollY;
-var backToTopButtonThreshold = 200;
+var previousScroll = window.scrollY; // Gem hvor brugeren er scrollet til.
+var backToTopButtonThreshold = 200; // Threshold foer back-to-top-knap dukker op.
 // Event Listeners
 backToTopBtn.addEventListener('click', () => {
+    // Scroll til toppen af siden.
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 headerBurger.addEventListener('click', () => {
+    // Toggle headeren i mobil tilstand.
     toggleMobileHeader();
 });
-// Override 
+/**
+ * Koeres naar brugeren scroller op eller ned.
+ */
 window.onscroll = () => {
-    // Header
+    // Tjek om headeren skal gemmes.
     if (window.scrollY > previousScroll && !headerBurger.classList.contains('active')) {
-        toggleHeader('hide');
+        toggleHeader('hide'); // Gem hvis man scroller ned.
     }
     else {
-        toggleHeader('show');
+        toggleHeader('show'); // Vis hvis man scroller op.
     }
+    // Gem nuvaerende scroll.
     previousScroll = window.scrollY;
-    // Back to top button
+    // Back to top knap.
     backToTopButtonHandler();
 };
+/**
+ * Koeres naar vinduet goeres mindre eller stoere.
+ */
 window.onresize = () => {
-    // Header
+    // Gem headeren hvis man gaar i mobil tilstand.
     if (window.innerWidth > 768) {
         toggleMobileHeader('hide');
     }
-    // Back to top button
+    // Back to top knap.
     backToTopButtonHandler();
 };
 // Methods
-// Back to top button handler function
+/**
+ * Haandtere back-to-top knappen.
+ */
 function backToTopButtonHandler() {
     if (document.documentElement.scrollTop > backToTopButtonThreshold && window.innerWidth > 1168) {
-        toggleBackToTopButton('show');
+        toggleBackToTopButton('show'); // Vis knappen.
     }
     else {
-        toggleBackToTopButton('hide');
+        toggleBackToTopButton('hide'); // Gem knappen.
     }
 }
+/**
+ * Toggler back-to-top knappen.
+ * @param option Kan være 'show', 'remove' eller ingenting.
+ */
 function toggleBackToTopButton(option = '') {
     if (option === 'show') {
         backToTopBtn.classList.remove('hide');
-        console.log('remove');
     }
     else if (option === 'hide') {
         backToTopBtn.classList.add('hide');
-        console.log('add');
     }
     else {
         backToTopBtn.classList.toggle('hide');
-        console.log('toggle');
     }
 }
-// Toggle mobile header and animation
+/**
+ * Toggle headeren i mobiltilstand.
+ * @param option Kan være 'show', 'hide' eller ingenting.
+ */
 function toggleMobileHeader(option = '') {
     var isActive = headerBurger.classList.contains('active');
     if (option === 'show') {
@@ -90,7 +105,10 @@ function toggleMobileHeader(option = '') {
         }
     }
 }
-// Toggle header visibility
+/**
+ * Toggle om headeren er synlig eller ej.
+ * @param option Kan være 'show', 'hide' eller ingenting.
+ */
 function toggleHeader(option = '') {
     if (option === 'hide') {
         header.classList.add('hide');

@@ -5,64 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/login.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../src/css/login.css">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <title>WEB BRAIN</title>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div id="header-container">
-            <a class="logo-container logo-normal" href="/index.html">
-                <img src="/assets/img/web-learn-logo.svg" alt="logo">
-                <div class="text">
-                    <h4 class="company-name">WEB BRAIN</h4>
-                </div>
-            </a>
+    <header id="header"></header>
 
-            <div class="header-menu">
-                <nav>
-                    <ul class="nav-menus">
-                        <li class="menu">
-                            <a class="title" href="/src/html/guides.html">
-                                <p class="menu-name">Guides</p>
-                            </a>
-                        </li>
-                        <li class="menu">
-                            <div class="title">
-                                <p class="menu-name" href="#">More</p>
-                                <i class="material-icons">arrow_drop_down</i>
-                            </div>
-                            <ul>
-                                <li><a href="/src/html/aboutus.html">About Us</a></li>
-                                <li><a href="/src/html/faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-    
-                <div class="profile-container">
-                    <a class="login" href="/src/html/login.html"><button class="button-primary">Sign In</button></a>
-                </div>
-            </div>
-
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main content -->
+    <!-- Sidens indhold -->
     <div class="wrapper">
         <section class="section-account sign-in">
             <div class="left">
                 <div class="header">
                     <p>WELCOME TO</p>
                     <div class="logo-container logo-large">
-                        <img src="/assets/img/web-learn-logo.svg" alt="logo">
+                        <img src="../../assets/img/web-learn-logo.svg" alt="logo">
                         <h4 class="company-name">WEB BRAIN</h4>
                     </div>
                 </div>
@@ -97,18 +56,10 @@
                         </div>
 
                         <div class="alternate-login">
-                            <div>+</div>
-                            <div>+</div>
-                            <div>+</div>
-                            <div>+</div>
-                            <div>+</div>
+                            <button class="button-surface-hollow">Login with Google</button>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="right">
-              
             </div>
         </section>
     </div>
@@ -119,22 +70,22 @@
             <div class="content">
                 <div class="company">
                     <div class="logo-container logo-small">
-                        <img src="/assets/img/web-learn-logo.svg" alt="logo">
+                        <img src="../../assets/img/web-learn-logo.svg" alt="logo">
                         <h4 class="company-name">WEB BRAIN</h4>
                     </div>
     
                     <div class="socials">
-                        <a href="https://www.facebook.com" target="_blank"><img src="/assets/icons/facebook_logo.svg" alt="facebook"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="/assets/icons/instagram_logo.svg" alt="instagram"></a>
-                        <a href="https://www.youtube.com" target="_blank"><img src="/assets/icons/youtube_logo.svg" alt="youtube"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="../../assets/icons/facebook_logo.svg" alt="facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="../../assets/icons/instagram_logo.svg" alt="instagram"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="../../assets/icons/youtube_logo.svg" alt="youtube"></a>
                     </div>
                 </div>
     
                 <div class="website-links">
                     <h4 class="header">Quick Links</h4>
                     <ul>
-                        <li><a href="/index.html" class="link">Home</a></li>
-                        <li><a href="/src/html/guides.html" class="link">Guides</a></li>
+                        <li><a href="../../index.html" class="link">Home</a></li>
+                        <li><a href="../../src/html/guides.html" class="link">Guides</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -146,8 +97,8 @@
                 <div class="support-links">
                     <h4 class="header">Support</h4>
                     <ul>
-                        <li><a href="/src/html/aboutus.html" class="link">About Us</a></li>
-                        <li><a href="/src/html/faq.html" class="link">FAQ</a></li>
+                        <li><a href="../../src/html/aboutus.html" class="link">About Us</a></li>
+                        <li><a href="../../src/html/faq.html" class="link">FAQ</a></li>
                         <li><a href="#" class="link">Link 3</a></li>
                         <li><a href="#" class="link">Link 4</a></li>
                         <li><a href="#" class="link">Link 5</a></li>
@@ -184,8 +135,9 @@
     <i id="button-back-to-top" class="material-icons hide">arrow_upward</i>
 
     <!-- JavaScript -->
-    <script src="/src/js/default.js"></script>
-    <script src="/src/js/slideshow.js"></script>
-    <script src="/src/js/index.js"></script>
+    <script src="../../src/js/template.js"></script>
+    <script src="../../src/js/default.js"></script>
+    <script src="../../src/js/slideshow.js"></script>
+    <script src="../../src/js/index.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@
 @import "footer";
 @import "slideshow";
 
-
 .section-account {
     border-radius: 10px;
     box-shadow: 0px 1px 10px var(--clr-shadow);
@@ -120,7 +119,7 @@
                     max-width: 400px;
                     margin-inline: auto;
 
-                    div {
+                    p {
                         background-color: var(--clr-text-underline);
                         width: 2.5rem;
                         height: 2.5rem;
